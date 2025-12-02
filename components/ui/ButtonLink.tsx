@@ -1,0 +1,88 @@
+import Link from "next/link";
+import Image from "next/image";
+import type { LucideIcon } from "lucide-react";
+import { ReactNode } from "react";
+
+type ButtonVariant = "primary" | "secondary" | "outline" | "surface" | "line";
+
+interface ButtonLinkProps {
+  href: string;
+  label: string;
+  icon?: LucideIcon;
+  variant?: ButtonVariant;
+  className?: string;
+  target?: "_blank" | "_self";
+  rel?: string;
+  description?: ReactNode;
+}
+
+const variantClasses: Record<ButtonVariant, string> = {
+  primary:
+    "bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90",
+  secondary:
+    "bg-secondary text-white shadow-lg shadow-secondary/30 hover:bg-secondary/90",
+  outline:
+    "border border-border bg-white text-primary hover:bg-primary/5 hover:border-primary",
+  surface:
+    "bg-surface text-primary border border-border hover:border-primary/60 hover:bg-white",
+  line:
+    "bg-white text-[#00C300] border-2 border-[#00C300] shadow-lg shadow-[#00C300]/20 hover:bg-[#00C300]/5 hover:border-[#00B300]",
+};
+
+// LINE公式ロゴの画像コンポーネント
+function LineLogo({ className }: { className?: string }) {
+  return (
+    <Image
+      src="/images/line-logo.png"
+      alt="LINE"
+      width={24}
+      height={24}
+      className={className}
+      priority
+      unoptimized
+    />
+  );
+}
+
+export function ButtonLink({
+  href,
+  label,
+  icon: Icon,
+  variant = "primary",
+  className = "",
+  target = "_self",
+  rel,
+  description,
+}: ButtonLinkProps) {
+  // classNameから背景色関連のクラスを除外（variantが優先されるように）
+  const baseClasses = "flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-4 text-base font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:flex-none md:px-8";
+  
+  // variantのスタイルを確実に適用するため、classNameの後に配置
+  const classes = [
+    baseClasses,
+    className,
+    variantClasses[variant], // variantを最後に適用して確実に上書き
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return (
+    <Link href={href} target={target} rel={rel} className={classes}>
+      {variant === "line" ? (
+        <LineLogo className="h-6 w-6 shrink-0 flex-shrink-0" />
+      ) : Icon ? (
+        <Icon className="size-5" />
+      ) : null}
+      <span className="flex flex-col leading-tight text-left">
+        {label}
+        {description && (
+          <span className={`text-xs font-normal ${variant === "line" ? "text-[#00C300]/80" : "text-text-muted"}`}>
+            {description}
+          </span>
+        )}
+      </span>
+    </Link>
+  );
+}
+
+
