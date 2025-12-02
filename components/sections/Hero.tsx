@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Leaf, Phone, Sparkles } from "lucide-react";
+import { Leaf, Phone, Sparkles } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
@@ -34,14 +34,6 @@ export function Hero() {
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
   };
 
   return (
@@ -83,22 +75,6 @@ export function Hero() {
       </div>
 
       {/* 独立したオーバーレイは削除 */}
-
-      {/* ナビゲーションボタン（左右の矢印） */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 z-30 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur transition-all hover:bg-white/30 md:left-8"
-        aria-label="前の画像"
-      >
-        <ChevronLeft className="size-6" />
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 z-30 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur transition-all hover:bg-white/30 md:right-8"
-        aria-label="次の画像"
-      >
-        <ChevronRight className="size-6" />
-      </button>
 
       {/* インジケーター（ドット） */}
       <div className="absolute bottom-6 left-1/2 z-30 flex -translate-x-1/2 gap-2">
