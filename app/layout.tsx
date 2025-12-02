@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
+const BUILD_VERSION = "2025-12-02T23:55:00+09:00";
+
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -21,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${notoSansJP.variable} font-sans antialiased text-text-main bg-background`}>
+      <body
+        className={`${notoSansJP.variable} font-sans antialiased text-text-main bg-background`}
+        data-build={BUILD_VERSION}
+      >
         {children}
       </body>
     </html>
