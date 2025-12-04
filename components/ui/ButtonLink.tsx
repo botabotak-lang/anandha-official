@@ -17,14 +17,19 @@ interface ButtonLinkProps {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
+  // Primary: Gold (SPEC defined)
   primary:
     "bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90",
+  // Secondary: Mapped to Accent (Green) for variation
   secondary:
-    "bg-secondary text-white shadow-lg shadow-secondary/30 hover:bg-secondary/90",
+    "bg-accent text-white shadow-lg shadow-accent/30 hover:bg-accent/90",
+  // Outline: Gold border
   outline:
     "border border-border bg-white text-primary hover:bg-primary/5 hover:border-primary",
+  // Surface: White background
   surface:
-    "bg-surface text-primary border border-border hover:border-primary/60 hover:bg-white",
+    "bg-white text-primary border border-border hover:border-primary/60",
+  // Line: Brand Color (Green) - Hardcoded as it's specific to LINE
   line:
     "bg-white text-[#00C300] border-2 border-[#00C300] shadow-lg shadow-[#00C300]/20 hover:bg-[#00C300]/5 hover:border-[#00B300]",
 };
@@ -32,15 +37,17 @@ const variantClasses: Record<ButtonVariant, string> = {
 // LINE公式ロゴの画像コンポーネント
 function LineLogo({ className }: { className?: string }) {
   return (
-    <Image
-      src="/images/line-logo.png"
-      alt="LINE"
-      width={24}
-      height={24}
-      className={className}
-      priority
-      unoptimized
-    />
+    <div className={`relative ${className}`}>
+      <Image
+        src="/images/line-logo.png"
+        alt="LINE"
+        fill
+        sizes="24px"
+        className="object-contain"
+        priority
+        unoptimized
+      />
+    </div>
   );
 }
 
@@ -61,7 +68,7 @@ export function ButtonLink({
   const classes = [
     baseClasses,
     className,
-    variantClasses[variant], // variantを最後に適用して確実に上書き
+    variantClasses[variant],
   ]
     .filter(Boolean)
     .join(" ");
@@ -76,7 +83,15 @@ export function ButtonLink({
       <span className="flex flex-col leading-tight text-left">
         {label}
         {description && (
-          <span className={`text-xs font-normal ${variant === "line" ? "text-[#00C300]/80" : "text-text-muted"}`}>
+          <span
+            className={`text-xs font-normal ${
+              variant === "primary" || variant === "secondary"
+                ? "text-white/90"
+                : variant === "line"
+                ? "text-[#00C300]/80"
+                : "text-text-muted"
+            }`}
+          >
             {description}
           </span>
         )}
@@ -84,5 +99,3 @@ export function ButtonLink({
     </Link>
   );
 }
-
-

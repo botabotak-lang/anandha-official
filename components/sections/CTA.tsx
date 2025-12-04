@@ -1,36 +1,40 @@
-import Link from "next/link";
 import { Phone } from "lucide-react";
-
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function CTASection() {
   return (
-    <section className="bg-primary text-white px-5 py-20" id="contact">
-      <div className="mx-auto max-w-4xl space-y-10">
+    <section className="py-20 md:py-28 bg-background">
+      <div className="mx-auto max-w-4xl px-5 md:px-8 text-center">
         <SectionHeading
-          eyebrow="Call to Action"
+          eyebrow="RESERVATION"
           title="今度こそ、リバウンドしない体へ。私たちと一緒に始めませんか？"
-          description={
-            <>
-              「変わりたい」と思った今が、スタートのタイミングです。まずはLINE、またはお電話でお気軽にご予約ください。あなたにお会いできるのを心より楽しみにしています。
-            </>
-          }
-          tone="light"
+          align="center"
         />
-        <div className="flex flex-col gap-4 md:flex-row">
+        
+        <p className="mt-8 mb-10 text-text leading-relaxed">
+          「変わりたい」と思った今が、スタートのタイミングです。<br className="hidden md:block"/>
+          まずはLINE、またはお電話でお気軽にご予約ください。<br className="hidden md:block"/>
+          あなたにお会いできるのを心より楽しみにしています。
+        </p>
+
+        <div className="flex flex-col gap-4 md:flex-row justify-center">
           <ButtonLink
             href="https://lin.ee/bbJLZFe"
             label="LINEで予約する"
+            description="24時間受付"
+            variant="line"
             target="_blank"
             rel="noopener noreferrer"
-            variant="line"
+            className="w-full md:w-auto min-w-[280px]"
           />
           <ButtonLink
             href="tel:090-5626-2380"
-            label="電話で予約・相談する"
+            label="電話で予約する"
+            description="10:00-19:00 / 日祝休"
             icon={Phone}
-            variant="secondary"
+            variant="primary"
+            className="w-full md:w-auto min-w-[280px] !bg-[#C05621] !shadow-[#C05621]/30 hover:!bg-[#C05621]/90"
           />
         </div>
       </div>
@@ -40,39 +44,37 @@ export function CTASection() {
 
 export function StickyCTA() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[100] border-t border-border/60 bg-white/70 px-5 py-4 backdrop-blur-md shadow-lg">
-      <div className="mx-auto flex max-w-4xl items-center justify-center gap-3 md:gap-4">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-4 md:hidden border-t border-border pb-safe">
+      <div className="flex gap-3 max-w-md mx-auto">
         <ButtonLink
           href="https://lin.ee/bbJLZFe"
-          label="LINEで予約する"
+          label="LINE予約"
+          variant="line"
           target="_blank"
           rel="noopener noreferrer"
-          variant="line"
-          className="!bg-white !text-[#00C300] !border-2 !border-[#00C300] text-sm font-semibold py-3 md:text-base md:px-8"
+          className="flex-1 text-sm py-3 px-2"
         />
         <ButtonLink
           href="tel:090-5626-2380"
-          label="電話で予約・相談する"
+          label="電話予約"
           icon={Phone}
-          variant="secondary"
-          className="text-sm font-semibold py-3 md:text-base md:px-8"
+          variant="primary"
+          className="flex-1 text-sm py-3 px-2 !bg-[#C05621] !shadow-[#C05621]/30 hover:!bg-[#C05621]/90"
         />
-        <Link
+        <a
           href="https://www.instagram.com/anandah_diet/?igsh=MWVyaXhuZ2RrM3A1ZQ%3D%3D#"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-lg border-2 border-pink-500 bg-white px-4 py-3 text-sm font-semibold transition-all hover:bg-pink-50 hover:border-pink-600 md:px-6"
-          aria-label="Instagramをフォロー"
+          className="flex items-center justify-center bg-white border border-border rounded-full w-14 h-14 shadow-md shrink-0"
+          aria-label="Instagram"
         >
           <img
             src="/images/Instagram.png"
-            alt="Instagram"
-            className="h-5 w-5"
+            alt="IG"
+            className="w-7 h-7 object-contain"
           />
-        </Link>
+        </a>
       </div>
     </div>
   );
 }
-
-

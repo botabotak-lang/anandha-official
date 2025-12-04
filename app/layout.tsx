@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
-const BUILD_VERSION = "2025-12-02T23:55:00+09:00";
-
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -12,8 +10,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "耳つぼダイエットサロン Anandah（アナンダ）",
-  description: "40代からの身体が変わる。無理なく食べて、美しく痩せる。大人のための耳つぼダイエットサロン Anandah",
+  title: '藤枝市の耳つぼダイエットサロン Anandha(アナンサ) | 40代からの健康痩せ',
+  description: '藤枝市・焼津市・島田市で耳つぼダイエットならAnandha。運動なし・食事制限なしで、40代〜60代の女性が無理なく痩せるサロンです。無料カウンセリング受付中。',
 };
 
 export default function RootLayout({
@@ -21,13 +19,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "耳つぼダイエットサロン Anandha",
+    "image": "/images/hero.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "下藪田322",
+      "postalCode": "426-0201",
+      "addressLocality": "藤枝市",
+      "addressRegion": "静岡県",
+      "addressCountry": "JP"
+    },
+    "telephone": "090-5626-2380",
+    "priceRange": "¥1,500〜"
+  };
+
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} font-sans antialiased text-text-main bg-background`}
-        data-build={BUILD_VERSION}
+        className={`${notoSansJP.variable} font-sans antialiased text-text bg-background`}
       >
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );

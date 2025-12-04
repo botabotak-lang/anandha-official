@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
 
 const navLinks = [
   { label: "特徴", href: "#features" },
-  { label: "流れ", href: "#flow" },
+  { label: "施術の流れ", href: "#flow" },
   { label: "料金", href: "#menu" },
-  { label: "オーナー", href: "#owner" },
+  { label: "ご挨拶", href: "#owner" },
   { label: "アクセス", href: "#access" },
 ];
 
@@ -55,9 +55,9 @@ export function Header() {
         aria-expanded={isMenuOpen}
       >
         {isMenuOpen ? (
-          <X className="size-6 text-text-main" />
+          <X className="size-6 text-text" />
         ) : (
-          <Menu className="size-6 text-text-main" />
+          <MenuIcon className="size-6 text-text" />
         )}
       </button>
 
@@ -89,7 +89,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-text-main transition-colors hover:text-primary"
+                className="text-text transition-colors hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -132,9 +132,9 @@ export function Header() {
                     <Link
                       href={link.href}
                       onClick={closeMenu}
-                      className="block text-lg font-medium text-text-main transition-colors hover:text-primary"
+                      className="block text-lg font-medium text-text transition-colors hover:text-primary"
                     >
-                      {link.label}
+                      {link.label === "ご挨拶" ? "オーナーからのご挨拶" : link.label}
                     </Link>
                   </li>
                 ))}
@@ -147,6 +147,3 @@ export function Header() {
     </>
   );
 }
-
-
-

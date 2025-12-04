@@ -1,69 +1,50 @@
 import Image from "next/image";
-import { Quote } from "lucide-react";
-
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Owner() {
   return (
-    <section className="bg-background px-5 py-20" id="owner">
-      <div className="mx-auto max-w-5xl space-y-12">
+    <section id="owner" className="py-20 md:py-28 bg-background">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
-          eyebrow="Owner"
+          eyebrow="OWNER PROFILE"
           title="私も、過去に「痩せない悩み」を抱えていました。"
           align="center"
         />
 
-        <div className="grid gap-10 rounded-[2.5rem] bg-white p-8 shadow-lg md:grid-cols-2 md:p-12">
-          <div className="space-y-4 text-base leading-loose text-text-main">
-            <p className="text-lg font-semibold text-primary">Anandah オーナー 窪田佑美</p>
+        <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-10 items-center">
+          <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] mx-auto rounded-full overflow-hidden shadow-lg md:order-last border-4 border-white/50">
+            <Image
+              src="/images/owner.jpg"
+              alt="Anandha オーナー 窪田佑美"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+
+          <div className="space-y-6 text-text leading-relaxed">
+            <div className="mb-4">
+              <p className="text-sm font-bold text-primary tracking-wider mb-1">Anandha オーナー</p>
+              <h3 className="text-2xl font-bold">窪田 佑美</h3>
+            </div>
+
             <p>
-              今でこそこうして皆様にダイエットのアドバイスをさせていただいていますが、実は私自身も、過去には体重増加に悩み、何をしても痩せられない時期がありました。
+              はじめまして。今でこそこうして皆様にダイエットのアドバイスをさせていただいていますが、実は私自身も、過去には体重増加に悩み、何をしても痩せられない時期がありました。
             </p>
             <p>
-              40代を過ぎて代謝が落ち、自己流のダイエットでは限界を感じていた時に、この耳つぼダイエットに出会いました。その結果、2ヶ月で
-              <strong className="text-secondary">-6kg</strong>
-              の減量に成功。無理なく健康的に痩せられたことに、私自身が一番驚きました。
+              40代を過ぎて代謝が落ち、自己流のダイエットでは限界を感じていた時に、この耳つぼダイエットに出会いました。
+            </p>
+            <p>
+              その結果、2ヶ月でマイナス6kgの減量に成功。無理なく健康的に痩せられたことに、私自身が一番驚きました。
             </p>
             <p>
               「好きな服を着られる喜び」と「健康な体を取り戻す安心感」。この感動を、同じ悩みを持つ同世代の女性に伝えたい。その一心でサロンをオープンしました。
             </p>
-            <p>
+            <p className="font-bold text-primary text-lg">
               痩せることを目的とするだけでなく、その先にある「笑顔で過ごす毎日」を一緒に叶えましょう。私が全力でサポートいたします。
             </p>
-          </div>
-
-          <div className="flex flex-col gap-6 md:max-w-sm">
-            {/* オーナー写真 */}
-            <div className="relative h-96 overflow-hidden rounded-[2rem] md:h-[400px]">
-              <img
-                src="/images/owner.jpg"
-                alt="Anandahオーナー 窪田佑美の笑顔写真"
-                className="h-full w-full object-contain object-center"
-              />
-            </div>
-
-            {/* ビフォーアフター写真 */}
-            <div className="relative overflow-hidden rounded-2xl border border-border">
-              <div className="absolute left-0 top-0 z-10 rounded-br-xl bg-secondary px-3 py-1 text-xs font-bold text-white">
-                Before / After
-              </div>
-              <img
-                src="/images/before-after.jpg"
-                alt="オーナーのビフォーアフター比較写真"
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            
-            <div className="flex items-center gap-3 rounded-2xl border border-border bg-background/80 p-4 text-sm text-text-muted">
-              <Quote className="size-5 text-accent shrink-0" />
-              <span>女性お一人おひとりのペースに合わせ、優しく寄り添います。</span>
-            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
-
-

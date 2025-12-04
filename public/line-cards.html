@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE Card Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5F7161',
+                        surface: '#FFFFFF',
+                        'text-main': '#434343',
+                        'text-muted': '#78716C',
+                        border: '#E7E5E4',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 40px;
+            font-family: "Noto Sans JP", sans-serif;
+        }
+        .card-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        /* 
+           LINE Card Type Message Ratio 1.11:1 
+           Width: 1080px
+           Height: 1080 / 1.11 = 972.97... -> 973px
+        */
+        .card-wrapper {
+            width: 1080px;
+            height: 973px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transform-origin: top left;
+        }
+        
+        /* プレビュー用の縮小表示スタイル */
+        .preview-scale {
+            transform: scale(0.4); 
+            margin-bottom: -600px; 
+            margin-right: -600px;
+        }
+        
+        @media print {
+            .card-wrapper {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mb-8 text-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-2">LINEカードタイプメッセージ用画像生成</h1>
+        <p class="text-gray-600">比率 1.11:1 (1080x973px) に設定しました。</p>
+        <p class="text-sm text-gray-500 mt-2">※画面上では縮小表示されています。クリックで等倍確認できます。</p>
+    </div>
+
+    <div class="card-container">
+        <!-- STEP 1 -->
+        <div class="card-wrapper preview-scale" id="step1">
+            <div class="w-full h-full bg-surface flex flex-col relative overflow-hidden">
+                <!-- Image Section (Top 50%) -->
+                <div class="h-[50%] w-full relative">
+                    <!-- 顔全体が写るように位置調整 (上寄り) -->
+                    <img src="images/hero-2.jpg" alt="カウンセリング" class="w-full h-full object-cover object-[center_25%]">
+                    
+                    <!-- Step Label Badge -->
+                    <div class="absolute top-8 left-8 bg-white/95 backdrop-blur px-8 py-4 rounded-full shadow-md border border-white/20">
+                        <span class="text-3xl font-bold tracking-[0.2em] text-primary">STEP.01</span>
+                    </div>
+                </div>
+
+                <!-- Content Section (Bottom 50%) -->
+                <div class="h-[50%] p-10 flex flex-col items-center text-center relative bg-white">
+                    <!-- Icon overlapping image and text -->
+                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-[2rem] bg-white shadow-xl flex items-center justify-center text-primary z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <path d="M12 11h4"/>
+                            <path d="M12 16h4"/>
+                            <path d="M8 11h.01"/>
+                            <path d="M8 16h.01"/>
+                        </svg>
+                    </div>
+
+                    <div class="mt-16 space-y-6">
+                        <h2 class="text-[56px] font-bold text-primary leading-tight">
+                            カウンセリング
+                        </h2>
+                        <p class="text-[38px] leading-[1.6] text-text-main font-medium px-4">
+                            90分ほどで、<br>あなたに最適なダイエットプランをご提案。<br>
+                            <span class="bg-primary/10 text-primary font-bold px-2 py-1 rounded">期間や料金も事前に分かる</span>ので安心です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="card-wrapper preview-scale" id="step2">
+            <div class="w-full h-full bg-surface flex flex-col relative overflow-hidden">
+                <!-- Image Section (Top 50%) -->
+                <div class="h-[50%] w-full relative">
+                    <img src="images/LINEカード用３.jpg" alt="ダイエット開始" class="w-full h-full object-cover object-center">
+                    
+                    <!-- Step Label Badge -->
+                    <div class="absolute top-8 left-8 bg-white/95 backdrop-blur px-8 py-4 rounded-full shadow-md border border-white/20">
+                        <span class="text-3xl font-bold tracking-[0.2em] text-primary">STEP.02</span>
+                    </div>
+                </div>
+
+                <!-- Content Section (Bottom 50%) -->
+                <div class="h-[50%] p-10 flex flex-col items-center text-center relative bg-white">
+                    <!-- Icon overlapping image and text -->
+                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-[2rem] bg-white shadow-xl flex items-center justify-center text-primary z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/>
+                            <path d="M16 2v4"/>
+                            <path d="M8 2v4"/>
+                            <path d="M3 10h5"/>
+                            <path d="M17.5 17.5 16 16.25V14"/>
+                            <path d="M22 16a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/>
+                        </svg>
+                    </div>
+
+                    <div class="mt-16 space-y-6">
+                        <h2 class="text-[56px] font-bold text-primary leading-tight">
+                            ダイエット開始
+                        </h2>
+                        <p class="text-[38px] leading-[1.6] text-text-main font-medium px-4">
+                            「これならできそう！」と思えたらお申し込み。<br>
+                            耳つぼ施術は<span class="bg-primary/10 text-primary font-bold px-2 py-1 rounded">1回15分ほど</span>、<br>
+                            <span class="bg-primary/10 text-primary font-bold px-2 py-1 rounded">週2回</span>お越しください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="card-wrapper preview-scale" id="step3">
+            <div class="w-full h-full bg-surface flex flex-col relative overflow-hidden">
+                <!-- Image Section (Top 50%) -->
+                <div class="h-[50%] w-full relative">
+                    <img src="images/LINEカード用２.jpg" alt="卒業" class="w-full h-full object-cover object-center">
+                    
+                    <!-- Step Label Badge -->
+                    <div class="absolute top-8 left-8 bg-white/95 backdrop-blur px-8 py-4 rounded-full shadow-md border border-white/20">
+                        <span class="text-3xl font-bold tracking-[0.2em] text-primary">STEP.03</span>
+                    </div>
+                </div>
+
+                <!-- Content Section (Bottom 50%) -->
+                <div class="h-[50%] p-10 flex flex-col items-center text-center relative bg-white">
+                    <!-- Icon overlapping image and text -->
+                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-[2rem] bg-white shadow-xl flex items-center justify-center text-primary z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+
+                    <div class="mt-16 space-y-6">
+                        <h2 class="text-[56px] font-bold text-primary leading-tight">
+                            卒業
+                        </h2>
+                        <p class="text-[38px] leading-[1.6] text-text-main font-medium px-4">
+                            目標体重に達したら卒業。<br>
+                            <span class="bg-primary/10 text-primary font-bold px-2 py-1 rounded">無料アフターフォロー付き</span>で、<br>
+                            リバウンドの心配もありません。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // クリックで等倍表示に切り替える機能
+        document.querySelectorAll('.card-wrapper').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('preview-scale');
+                // マージン調整のトグル
+                if (card.classList.contains('preview-scale')) {
+                    card.style.marginBottom = '-600px';
+                    card.style.marginRight = '-600px';
+                } else {
+                    card.style.marginBottom = '40px';
+                    card.style.marginRight = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

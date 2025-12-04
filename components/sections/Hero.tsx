@@ -6,17 +6,21 @@ import { Leaf, Phone, Sparkles } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
-// スライドショー用の画像リスト（画像を追加する場合はここに追加）
+// SPEC.mdに準拠したテキスト
+const MAIN_COPY_1 = "運動も、我慢も、もう手放しましょう。";
+const MAIN_COPY_2 = "人生最後のダイエットで、心と体を「健康」へ。";
+
+// スライドショー用の画像リスト
 const heroImages = [
   { 
     src: "/images/hero.jpg", 
     alt: "リラックスして笑顔を見せる女性",
-    title: "運動も、我慢も、もう手放しましょう。"
+    title: MAIN_COPY_1
   },
   { 
     src: "/images/hero-2.jpg", 
     alt: "サロンの雰囲気",
-    title: "人生最後のダイエットで、心と体を「健康」へ。"
+    title: MAIN_COPY_2
   },
 ];
 
@@ -42,7 +46,7 @@ export function Hero() {
       className="relative isolate overflow-hidden rounded-b-[2.5rem] bg-primary text-white"
     >
       {/* スライドショー画像 */}
-      <div className="relative h-[450px] md:h-[550px]">
+      <div className="relative h-[550px] md:h-[650px]">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -59,13 +63,13 @@ export function Hero() {
               className="object-cover"
               unoptimized
             />
-            {/* 画像用オーバーレイ - 薄く調整 */}
-            <div className="absolute inset-0 bg-black/20 z-10" />
+            {/* 画像用オーバーレイ - 文字の可読性確保のため少し濃いめに */}
+            <div className="absolute inset-0 bg-black/30 z-10" />
             
             {/* キャッチコピー（オーバーレイの上） */}
             <div className="absolute inset-0 flex items-center justify-center z-20">
-              <div className="px-4 text-center">
-                <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-4xl leading-relaxed tracking-wide">
+              <div className="px-4 text-center max-w-4xl">
+                <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap">
                   {image.title}
                 </h2>
               </div>
@@ -73,8 +77,6 @@ export function Hero() {
           </div>
         ))}
       </div>
-
-      {/* 独立したオーバーレイは削除 */}
 
       {/* インジケーター（ドット） */}
       <div className="absolute bottom-6 left-1/2 z-30 flex -translate-x-1/2 gap-2">
@@ -98,10 +100,12 @@ export function Hero() {
           Anandah Ear Diet Salon
         </div>
         <div className="space-y-6">
-          <p className="text-lg md:text-xl text-surface/90 leading-relaxed">
-            40代からの身体が変わる。無理なく食べて、美しく痩せる
+          <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-medium">
+            40代からの身体が変わる。
             <br className="hidden md:block" />
-            大人のための耳つぼダイエットサロン Anandah
+            無理なく食べて、美しく痩せる
+            <br className="hidden md:block" />
+            大人のための耳つぼダイエットサロン Anandha
           </p>
         </div>
 
@@ -114,16 +118,18 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           />
+          {/* Phone button set to surface (White) to contrast with Gold background */}
           <ButtonLink
             href="tel:090-5626-2380"
             label="電話で相談する"
             description="10:00-19:00 / 日祝休"
             icon={Phone}
-            variant="secondary"
+            variant="surface"
+            className="!text-[#C05621] hover:!bg-white/90"
           />
         </div>
 
-        <div className="grid gap-4 rounded-3xl bg-white/10 p-6 text-sm leading-relaxed backdrop-blur">
+        <div className="grid gap-4 rounded-3xl bg-white/10 p-6 text-sm leading-relaxed backdrop-blur border border-white/20">
           <div className="flex items-center gap-3">
             <Sparkles className="size-5 text-accent" />
             <p>耳つぼ＋栄養サポートで「代謝」と「食欲」をやさしく整えます</p>
@@ -141,5 +147,3 @@ export function Hero() {
     </section>
   );
 }
-
-
