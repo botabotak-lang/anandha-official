@@ -12,6 +12,9 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: '藤枝市の耳つぼダイエットサロン Anandha(アナンサ) | 40代からの健康痩せ',
   description: '藤枝市・焼津市・島田市で耳つぼダイエットならAnandha。運動なし・食事制限なしで、40代〜60代の女性が無理なく痩せるサロンです。無料カウンセリング受付中。',
+  verification: {
+    google: 'YN7xdPs1UBGJel5v7FAsgtcXH4fvxvz0TSXH85mERfQ',
+  },
 };
 
 export default function RootLayout({
