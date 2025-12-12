@@ -125,21 +125,21 @@ export function Hero() {
             description="10:00-19:00 / 日祝休"
             icon={Phone}
             variant="surface"
-            className="!text-[#C05621] hover:!bg-white/90"
+            className="!text-[#B05D4B] hover:!bg-white/90"
           />
         </div>
 
-        <div className="grid gap-4 rounded-3xl bg-white/10 p-6 text-sm leading-relaxed backdrop-blur border border-white/20">
+        <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-text font-medium">
           <div className="flex items-center gap-3">
-            <Sparkles className="size-5 text-accent" />
+            <Sparkles className="size-5 text-accent shrink-0" />
             <p>耳つぼ＋栄養サポートで「代謝」と「食欲」をやさしく整えます</p>
           </div>
           <div className="flex items-center gap-3">
-            <Sparkles className="size-5 text-accent" />
+            <Sparkles className="size-5 text-accent shrink-0" />
             <p>無理な運動や極端な食事制限は不要。「好き」を諦めないダイエット</p>
           </div>
           <div className="flex items-center gap-3">
-            <Sparkles className="size-5 text-accent" />
+            <Sparkles className="size-5 text-accent shrink-0" />
             <p>完全予約制・プライベート空間。マンツーマンで卒業まで伴走します</p>
           </div>
         </div>

@@ -34,7 +34,7 @@ export function CTASection() {
             description="10:00-19:00 / 日祝休"
             icon={Phone}
             variant="primary"
-            className="w-full md:w-auto min-w-[280px] !bg-[#C05621] !shadow-[#C05621]/30 hover:!bg-[#C05621]/90"
+            className="w-full md:w-auto min-w-[280px] !bg-[#B05D4B] !shadow-[#B05D4B]/30 hover:!bg-[#B05D4B]/90"
           />
         </div>
       </div>
@@ -59,7 +59,7 @@ export function StickyCTA() {
           label="電話予約"
           icon={Phone}
           variant="primary"
-          className="flex-1 text-sm py-3 px-2 !bg-[#C05621] !shadow-[#C05621]/30 hover:!bg-[#C05621]/90"
+          className="flex-1 text-sm py-3 px-2 !bg-[#B05D4B] !shadow-[#B05D4B]/30 hover:!bg-[#B05D4B]/90"
         />
         <a
           href="https://www.instagram.com/anandah_diet/?igsh=MWVyaXhuZ2RrM3A1ZQ%3D%3D#"
