@@ -8,7 +8,7 @@ const navLinks = [
   { label: "特徴", href: "#features" },
   { label: "施術の流れ", href: "#flow" },
   { label: "料金", href: "#menu" },
-  { label: "ご挨拶", href: "#owner" },
+  { label: "【テスト】ご挨拶", href: "#owner" },
   { label: "アクセス", href: "#access" },
 ];
 
