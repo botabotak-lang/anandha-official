@@ -10,6 +10,7 @@ import { Owner } from "@/components/sections/Owner";
 import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
 import { Footer } from "@/components/sections/Footer";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export default function Home() {
   return (
@@ -18,15 +19,41 @@ export default function Home() {
       <main className="flex flex-col gap-0">
         <Hero />
         <div className="space-y-0">
-          <Problem />
-          <Solution />
-          <Features />
-          <Flow />
-          <Menu />
-          <Campaign />
-          <Owner />
-          <Access />
-          <CTASection />
+          <FadeIn>
+            <Problem />
+          </FadeIn>
+          
+          <FadeIn delay={0.2}>
+            <Solution />
+          </FadeIn>
+          
+          <FadeIn>
+            <Features />
+          </FadeIn>
+          
+          <FadeIn>
+            <Flow />
+          </FadeIn>
+          
+          <FadeIn>
+            <Menu />
+          </FadeIn>
+          
+          <FadeIn direction="up">
+            <Campaign />
+          </FadeIn>
+          
+          <FadeIn>
+            <Owner />
+          </FadeIn>
+          
+          <FadeIn>
+            <Access />
+          </FadeIn>
+          
+          <FadeIn>
+            <CTASection />
+          </FadeIn>
         </div>
       </main>
       <Footer />
