@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body
         className={`${notoSansJP.variable} font-sans antialiased text-text bg-background`}
       >
+        <GoogleAnalytics gaId="G-TV7RJFN3EB" />
         {children}
         <script
           type="application/ld+json"
