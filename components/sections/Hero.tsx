@@ -43,10 +43,10 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden rounded-b-[2.5rem] bg-primary"
+      className="relative isolate rounded-b-[2.5rem] bg-primary"
     >
       {/* スライドショー画像 */}
-      <div className="relative h-[450px] md:h-[700px] z-0">
+      <div className="relative h-[500px] md:h-[800px] z-0 overflow-hidden rounded-b-[2.5rem]">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -65,11 +65,11 @@ export function Hero() {
             />
             {/* 画像用オーバーレイ - 文字が見やすいように下部のみグラデーション */}
             <div 
-              className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black/40" 
+              className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black/60" 
             />
             
-            {/* キャッチコピー（画像に重なる帯デザイン） */}
-            <div className="absolute inset-x-0 bottom-12 md:bottom-20 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
+            {/* キャッチコピー（下のセクションにはみ出す配置） */}
+            <div className="absolute inset-x-0 -bottom-16 md:-bottom-24 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
@@ -116,7 +116,7 @@ export function Hero() {
       </div>
 
       {/* インジケーター（ドット） - 画像エリアの最下部に配置 */}
-      <div className="absolute top-[430px] md:top-[680px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-6 left-1/2 z-30 flex -translate-x-1/2 gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -130,58 +130,58 @@ export function Hero() {
           />
         ))}
       </div>
+    </section>
 
-      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-16 pb-24 md:pt-24">
-        <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/10">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-sm font-bold tracking-wider text-white/90 mb-6">
-            <Leaf className="size-4" />
+    <div className="relative z-20 mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-32 pb-24 md:pt-48">
+      <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/10">
+        <div className="flex items-center justify-center md:justify-start gap-2 text-sm font-bold tracking-wider text-white/90 mb-6">
+          <Leaf className="size-4" />
+          耳つぼダイエットサロン Anandha
+        </div>
+        <div className="space-y-6 mb-8">
+          <p className="text-lg md:text-2xl text-white leading-relaxed font-bold drop-shadow-sm">
+            40代からの身体が変わる。
+            <br className="hidden md:block" />
+            無理なく食べて、美しく痩せる
+            <br className="hidden md:block" />
             耳つぼダイエットサロン Anandha
-          </div>
-          <div className="space-y-6 mb-8">
-            <p className="text-lg md:text-2xl text-white leading-relaxed font-bold drop-shadow-sm">
-              40代からの身体が変わる。
-              <br className="hidden md:block" />
-              無理なく食べて、美しく痩せる
-              <br className="hidden md:block" />
-              耳つぼダイエットサロン Anandha
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-start">
-            <ButtonLink
-              href="https://lin.ee/bbJLZFe"
-              label="LINEで予約する"
-              description="24時間受付"
-              variant="line"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-            <ButtonLink
-              href="tel:090-5626-2380"
-              label="電話で相談する"
-              description="9:00-21:00 / 日曜(要予約)"
-              icon={Phone}
-              variant="surface"
-              className="!text-accent hover:!bg-white/90"
-            />
-          </div>
+          </p>
         </div>
 
-        <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-stone-800 font-medium">
-          <div className="flex items-center gap-3">
-            <Sparkles className="size-5 text-accent shrink-0" />
-            <p>耳つぼ＋栄養サポートで「代謝」と「食欲」をやさしく整えます</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Sparkles className="size-5 text-accent shrink-0" />
-            <p>無理な運動や極端な食事制限は不要。「好き」を諦めないダイエット</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Sparkles className="size-5 text-accent shrink-0" />
-            <p>完全予約制・プライベート空間。マンツーマンで卒業まで伴走します</p>
-          </div>
+        <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-start">
+          <ButtonLink
+            href="https://lin.ee/bbJLZFe"
+            label="LINEで予約する"
+            description="24時間受付"
+            variant="line"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+          <ButtonLink
+            href="tel:090-5626-2380"
+            label="電話で相談する"
+            description="9:00-21:00 / 日曜(要予約)"
+            icon={Phone}
+            variant="surface"
+            className="!text-accent hover:!bg-white/90"
+          />
         </div>
       </div>
-    </section>
+
+      <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-stone-800 font-medium">
+        <div className="flex items-center gap-3">
+          <Sparkles className="size-5 text-accent shrink-0" />
+          <p>耳つぼ＋栄養サポートで「代謝」と「食欲」をやさしく整えます</p>
+        </div>
+        <div className="flex items-center gap-3">
+          <Sparkles className="size-5 text-accent shrink-0" />
+          <p>無理な運動や極端な食事制限は不要。「好き」を諦めないダイエット</p>
+        </div>
+        <div className="flex items-center gap-3">
+          <Sparkles className="size-5 text-accent shrink-0" />
+          <p>完全予約制・プライベート空間。マンツーマンで卒業まで伴走します</p>
+        </div>
+      </div>
+    </div>
   );
 }
