@@ -43,10 +43,10 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden rounded-b-[2.5rem] bg-primary text-white"
+      className="relative isolate overflow-hidden rounded-b-[2.5rem] bg-primary"
     >
       {/* スライドショー画像 */}
-      <div className="absolute inset-0 z-0">
+      <div className="relative h-[450px] md:h-[600px] z-0">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -60,20 +60,16 @@ export function Hero() {
               fill
               sizes="100vw"
               priority={index === 0}
-              className={`object-cover ${index === 0 ? 'object-[center_20%] md:object-top' : 'object-center'}`}
+              className={`object-cover ${index === 0 ? 'object-[center_15%]' : 'object-center'}`}
               unoptimized
             />
-            {/* 画像用オーバーレイ - 全体的に暗くして文字を読みやすくする */}
+            {/* 画像用オーバーレイ - 文字が見やすいように下部のみグラデーション */}
             <div 
-              className={`absolute inset-0 z-10 ${
-                index === 0 
-                  ? "bg-gradient-to-b from-transparent via-transparent to-black/60" 
-                  : "bg-black/40"
-              }`} 
+              className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black/40" 
             />
             
-            {/* キャッチコピー（スライドショー内テキスト） */}
-            <div className="absolute inset-x-0 bottom-[40%] md:bottom-[35%] flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
+            {/* キャッチコピー（画像に重なる帯デザイン） */}
+            <div className="absolute inset-x-0 bottom-8 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
@@ -97,7 +93,7 @@ export function Hero() {
                 </>
               ) : (
                 <div className="bg-black/40 p-6 rounded-xl backdrop-blur-sm">
-                  <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap text-center">
+                  <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-4xl leading-loose tracking-wide whitespace-pre-wrap text-center">
                     {image.title}
                   </h2>
                 </div>
@@ -107,8 +103,8 @@ export function Hero() {
         ))}
       </div>
 
-      {/* インジケーター（ドット） */}
-      <div className="absolute top-[60%] left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      {/* インジケーター（ドット） - 画像エリア内に配置 */}
+      <div className="absolute top-[400px] md:top-[550px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -123,8 +119,8 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-[650px] pb-24 md:pt-[600px]">
-        <div className="bg-black/30 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/10">
+      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 py-12 md:py-20">
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/20">
           <div className="flex items-center justify-center md:justify-start gap-2 text-sm uppercase tracking-[0.3em] text-white/90 mb-6">
             <Leaf className="size-4" />
             Anandah Ear Diet Salon
@@ -148,19 +144,18 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             />
-            {/* Phone button set to surface (White) to contrast with Gold background */}
             <ButtonLink
               href="tel:090-5626-2380"
               label="電話で相談する"
               description="10:00-19:00 / 日祝休"
               icon={Phone}
               variant="surface"
-              className="!text-[#B05D4B] hover:!bg-white/90"
+              className="!text-accent hover:!bg-white/90"
             />
           </div>
         </div>
 
-        <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-text font-medium mt-4">
+        <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-stone-800 font-medium">
           <div className="flex items-center gap-3">
             <Sparkles className="size-5 text-accent shrink-0" />
             <p>耳つぼ＋栄養サポートで「代謝」と「食欲」をやさしく整えます</p>
