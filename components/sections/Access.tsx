@@ -23,7 +23,7 @@ export function Access() {
                     <MapPin className="size-5 text-text-muted mt-1 shrink-0" />
                     <div>
                       <dt className="sr-only">住所</dt>
-                      <dd>（後ほど入力）</dd>
+                      <dd>〒426-0034 静岡県藤枝市藤枝4丁目14-24</dd>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -44,19 +44,24 @@ export function Access() {
           </div>
 
           {/* Map Image */}
-          <div className="relative h-[300px] md:h-full min-h-[300px] rounded-2xl overflow-hidden shadow-lg border border-border">
+          <a 
+            href="https://share.google/lIVtnqrUvYvjwshnK" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="relative h-[300px] md:h-full min-h-[300px] rounded-2xl overflow-hidden shadow-lg border border-border group"
+          >
             <Image
               src="/images/map.jpg"
               alt="地図"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/5 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <span className="bg-white/90 px-4 py-2 rounded-full text-sm font-bold text-text shadow-sm">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/5 group-hover:bg-black/20 transition-all duration-300">
+              <span className="bg-white/90 px-6 py-3 rounded-full text-base font-bold text-text shadow-xl transform group-hover:scale-110 transition-transform">
                 Google Mapsで見る
               </span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
