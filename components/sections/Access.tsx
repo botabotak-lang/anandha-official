@@ -17,7 +17,7 @@ export function Access() {
           <div className="space-y-8">
             <div className="bg-background/50 rounded-2xl p-8 border border-border space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-primary mb-6">お寺のプライベートサロン Anandha</h3>
+                <h3 className="text-xl font-bold text-primary mb-6">耳つぼダイエットサロン Anandha</h3>
                 <dl className="space-y-4 text-text">
                   <div className="flex items-start gap-4">
                     <MapPin className="size-5 text-text-muted mt-1 shrink-0" />
