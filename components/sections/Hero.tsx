@@ -63,27 +63,45 @@ export function Hero() {
               className="object-cover"
               unoptimized
             />
-            {/* 画像用オーバーレイ - オーナー写真は明るく、2枚目は文字が見えるように少し暗く */}
+            {/* 画像用オーバーレイ - 顔が見えるように上部はクリア、文字が見やすいように下部のみグラデーション */}
             <div 
-              className={`absolute inset-0 transition-colors duration-500 ${
-                index === 0 ? "bg-white/20" : "bg-black/30"
-              } z-10`} 
+              className={`absolute inset-0 z-10 ${
+                index === 0 
+                  ? "bg-gradient-to-b from-transparent via-transparent to-black/30" 
+                  : "bg-black/30"
+              }`} 
             />
             
-            {/* キャッチコピー（オーバーレイの上） */}
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <div className="px-4 text-center max-w-4xl">
-                <h2 className={`text-2xl font-bold drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap ${
-                  index === 0 ? "text-primary drop-shadow-md bg-white/70 p-4 rounded-xl backdrop-blur-sm" : "text-white"
-                }`}>
-                  {image.title}
-                </h2>
-                {index === 0 && (
-                  <p className="mt-6 text-lg md:text-2xl text-text font-bold bg-white/70 py-2 px-6 rounded-full inline-block backdrop-blur-sm">
+            {/* キャッチコピー（下部に配置、顔に被らないように） */}
+            <div className="absolute inset-x-0 bottom-[25%] md:bottom-[20%] flex flex-col items-center justify-end z-20 pb-10 px-4 space-y-4">
+              {index === 0 ? (
+                <>
+                  {/* 帯デザイン 1: 数値 */}
+                  <div className="bg-white px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-2xl mx-auto">
+                    <h2 className="text-xl md:text-3xl font-black text-accent tracking-wider text-center">
+                      2ヶ月で体重 <span className="text-3xl md:text-5xl text-[#E91E63]">-6kg</span>
+                    </h2>
+                  </div>
+                  
+                  {/* 帯デザイン 2: ストーリー */}
+                  <div className="bg-white px-6 py-3 transform rotate-1 shadow-lg w-full max-w-3xl mx-auto mt-2">
+                    <p className="text-lg md:text-2xl font-bold text-text-muted text-center leading-tight">
+                      何をしても痩せなかった私が変われた。<br className="md:hidden"/>次は、あなたの番です。
+                    </p>
+                  </div>
+
+                  {/* 名前 */}
+                  <p className="mt-4 text-white text-sm md:text-base font-bold bg-primary/90 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
                     Anandha オーナー 窪田 佑美
                   </p>
-                )}
-              </div>
+                </>
+              ) : (
+                <div className="bg-black/40 p-6 rounded-xl backdrop-blur-sm">
+                  <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap text-center">
+                    {image.title}
+                  </h2>
+                </div>
+              )}
             </div>
           </div>
         ))}
