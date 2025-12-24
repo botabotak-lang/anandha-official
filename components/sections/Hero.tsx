@@ -15,7 +15,7 @@ const heroImages = [
   { 
     src: "/images/owner.jpg", 
     alt: "Anandha オーナーが笑顔でお出迎え",
-    title: "「私にお任せください。\nあなたの最後のダイエットを、全力でサポートします。」"
+    title: "2ヶ月で体重-6kg。\n何をしても痩せなかった私が変われた。\n次は、あなたの番です。"
   },
   { 
     src: "/images/hero-2.jpg", 
@@ -63,17 +63,23 @@ export function Hero() {
               className="object-cover"
               unoptimized
             />
-            {/* 画像用オーバーレイ - 文字の可読性確保のため少し濃いめに */}
-            <div className={`absolute inset-0 bg-black/40 z-10 ${index === 0 ? "bg-black/20" : ""}`} />
+            {/* 画像用オーバーレイ - オーナー写真は明るく、2枚目は文字が見えるように少し暗く */}
+            <div 
+              className={`absolute inset-0 transition-colors duration-500 ${
+                index === 0 ? "bg-white/20" : "bg-black/30"
+              } z-10`} 
+            />
             
             {/* キャッチコピー（オーバーレイの上） */}
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <div className="px-4 text-center max-w-4xl">
-                <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap">
+                <h2 className={`text-2xl font-bold drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap ${
+                  index === 0 ? "text-primary drop-shadow-md bg-white/70 p-4 rounded-xl backdrop-blur-sm" : "text-white"
+                }`}>
                   {image.title}
                 </h2>
                 {index === 0 && (
-                  <p className="mt-4 text-lg md:text-2xl text-white font-medium drop-shadow-md">
+                  <p className="mt-6 text-lg md:text-2xl text-text font-bold bg-white/70 py-2 px-6 rounded-full inline-block backdrop-blur-sm">
                     Anandha オーナー 窪田 佑美
                   </p>
                 )}
