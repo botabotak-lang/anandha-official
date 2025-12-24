@@ -46,7 +46,7 @@ export function Hero() {
       className="relative isolate overflow-hidden rounded-b-[2.5rem] bg-primary"
     >
       {/* スライドショー画像 */}
-      <div className="relative h-[450px] md:h-[600px] z-0">
+      <div className="relative h-[450px] md:h-[700px] z-0">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -60,7 +60,7 @@ export function Hero() {
               fill
               sizes="100vw"
               priority={index === 0}
-              className={`object-cover ${index === 0 ? 'object-[center_15%]' : 'object-center'}`}
+              className={`object-cover ${index === 0 ? 'object-[center_15%] md:object-top' : 'object-center'}`}
               unoptimized
             />
             {/* 画像用オーバーレイ - 文字が見やすいように下部のみグラデーション */}
@@ -69,7 +69,7 @@ export function Hero() {
             />
             
             {/* キャッチコピー（画像に重なる帯デザイン） */}
-            <div className="absolute inset-x-0 bottom-12 md:bottom-16 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
+            <div className="absolute inset-x-0 bottom-12 md:bottom-20 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
@@ -86,10 +86,12 @@ export function Hero() {
                     </p>
                   </div>
 
-                  {/* 名前 */}
-                  <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/80 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
-                    耳つぼダイエットサロン Anandha オーナー 窪田 佑美
-                  </p>
+                  {/* 帯デザイン 3: 運動なし、無理な食事制限なし */}
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-sm mx-auto mt-1">
+                    <p className="text-base md:text-xl font-black text-[#E91E63] text-center tracking-tight">
+                      運動なし、無理な食事制限なし
+                    </p>
+                  </div>
                 </>
               ) : (
                 <>
@@ -100,10 +102,12 @@ export function Hero() {
                     </h2>
                   </div>
                   
-                  {/* 名前（2枚目も一応表示） */}
-                  <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/80 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
-                    耳つぼダイエットサロン Anandha
-                  </p>
+                  {/* 帯デザイン 2: 運動なし、無理な食事制限なし（2枚目も一応表示） */}
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-2 transform rotate-1 shadow-lg w-full max-w-sm mx-auto mt-1">
+                    <p className="text-base md:text-xl font-black text-[#E91E63] text-center tracking-tight">
+                      運動なし、無理な食事制限なし
+                    </p>
+                  </div>
                 </>
               )}
             </div>
@@ -112,7 +116,7 @@ export function Hero() {
       </div>
 
       {/* インジケーター（ドット） - 画像エリアの最下部に配置 */}
-      <div className="absolute top-[430px] md:top-[580px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      <div className="absolute top-[430px] md:top-[680px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}

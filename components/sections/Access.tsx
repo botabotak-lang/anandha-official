@@ -59,9 +59,9 @@ export function Access() {
           </div>
 
           {/* Map Embed */}
-          <div className="relative h-[400px] md:h-full min-h-[450px] rounded-2xl overflow-hidden shadow-lg border border-border">
+          <div className="relative h-[450px] md:h-full min-h-[500px] rounded-2xl overflow-hidden shadow-lg border border-border">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.3090013627055!2d138.2526323!3d34.8988636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bb99042b45053%3A0x8686f0302b0f443b!2zQW5hbmRoYSjjgqLjg4rjg7Pjg4ApIOiIsOOBpOOBvOODgOOCpOOCqOODg-ODiOOCteODreODsw!5e0!3m2!1sja!2sjp!4v1735061614740!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.6330405352337!2d138.26049419999998!3d34.89056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a4f85adbfa935%3A0x7d525ec99e5c359!2z44Ki44OK44Oz44OA77yIQW5hbmRhaO-8ieiIsOOBpOOBvOODgOOCpOOCqOODg-ODiOOCteODreODsw!5e0!3m2!1sja!2sjp!4v1735061614740!5m2!1sja!2sjp"
               width="100%"
               height="100%"
               style={{ border: 0 }}
