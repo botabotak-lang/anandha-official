@@ -25,7 +25,7 @@ export function Footer() {
               <span className="text-lg font-light text-text-muted tracking-widest">Anandah</span>
             </Link>
             <p className="text-xs text-text-muted text-center md:text-left">
-              藤枝市・焼津市・島田市の耳つぼダイエットサロン
+              静岡県藤枝市下藪田のお寺のプライベートサロン
             </p>
           </div>
 

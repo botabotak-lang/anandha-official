@@ -17,30 +17,45 @@ export function Access() {
           <div className="space-y-8">
             <div className="bg-background/50 rounded-2xl p-8 border border-border space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-primary mb-6">耳つぼダイエットサロン Anandha</h3>
+                <h3 className="text-xl font-bold text-primary mb-6">お寺のプライベートサロン Anandha</h3>
                 <dl className="space-y-4 text-text">
                   <div className="flex items-start gap-4">
                     <MapPin className="size-5 text-text-muted mt-1 shrink-0" />
                     <div>
                       <dt className="sr-only">住所</dt>
-                      <dd>〒426-0034 静岡県藤枝市藤枝4丁目14-24</dd>
+                      <dd>〒426-0005 静岡県藤枝市下藪田322</dd>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <Clock className="size-5 text-text-muted mt-1 shrink-0" />
                     <div>
                       <dt className="sr-only">営業時間</dt>
-                      <dd>9:00 - 20:00 (不定休)</dd>
+                      <dd>
+                        9:00 - 21:00<br />
+                        定休日：日曜（要予約）
+                      </dd>
                     </div>
                   </div>
                 </dl>
               </div>
             </div>
             
-            <p className="text-sm text-text-muted">
-              ※ プライベートサロンのため、詳細な住所はご予約確定後にお伝えいたします。<br />
-              ※ 駐車場あり
-            </p>
+            <div className="bg-stone-50 rounded-2xl p-6 border border-border">
+              <ul className="space-y-2 text-sm text-text font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-accent" />
+                  駐車場あり
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="size-1.5 rounded-full bg-accent" />
+                  出張対応可
+                </li>
+                <li className="flex items-center gap-2 text-accent">
+                  <span className="size-1.5 rounded-full bg-accent" />
+                  完全個室
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Map Image */}

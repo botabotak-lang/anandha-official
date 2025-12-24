@@ -75,7 +75,7 @@ export function Header() {
             />
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-normal text-text-muted tracking-wide md:text-base">
-                耳つぼダイエットサロン
+                お寺のプライベートサロン
               </span>
               <span className="text-xl font-light text-primary tracking-wider md:text-3xl">
                 Anandah

@@ -31,7 +31,7 @@ export function CTASection() {
           <ButtonLink
             href="tel:090-5626-2380"
             label="電話で予約する"
-            description="10:00-19:00 / 日祝休"
+            description="9:00-21:00 / 日曜(要予約)"
             variant="primary"
             icon={Phone}
             className="w-full md:w-auto min-w-[280px]"

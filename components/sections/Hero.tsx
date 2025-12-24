@@ -155,7 +155,7 @@ export function Hero() {
             <ButtonLink
               href="tel:090-5626-2380"
               label="電話で相談する"
-              description="10:00-19:00 / 日祝休"
+              description="9:00-21:00 / 日曜(要予約)"
               icon={Phone}
               variant="surface"
               className="!text-accent hover:!bg-white/90"
