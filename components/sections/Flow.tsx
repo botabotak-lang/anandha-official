@@ -3,25 +3,25 @@ import { MessageCircleHeart, Sparkles, Trophy } from "lucide-react";
 
 const steps = [
   {
-    icon: MessageCircleHeart,
-    step: "STEP.01",
+    number: "01",
     title: "カウンセリング",
     description:
       "90分ほどで、あなたに最適なダイエットプランをご提案します。期間や料金も事前に分かるのでご安心ください。",
+    icon: MessageCircleHeart,
   },
   {
-    icon: Sparkles,
-    step: "STEP.02",
+    number: "02",
     title: "ダイエット開始",
     description:
       "「これならできそう！」と思えたら、お申し込みください。耳つぼ施術は1回15分ほど、週2回お越しください。",
+    icon: Sparkles,
   },
   {
-    icon: Trophy,
-    step: "STEP.03",
+    number: "03",
     title: "卒業",
     description:
       "目標体重に達したら、卒業です。無料アフターフォローがあるので、リバウンドの心配もありません。",
+    icon: Trophy,
   },
 ];
 
@@ -35,46 +35,37 @@ export function Flow() {
           align="center"
         />
 
-        <div className="mt-12 md:mt-16 flex flex-col md:flex-row gap-8 md:gap-6 justify-center">
-          {steps.map((item, index) => (
-            <div
-              key={index}
-              className="relative flex-1 bg-white rounded-2xl p-8 border border-border shadow-sm flex flex-col items-center text-center group"
-            >
-              <div className="mb-6 bg-primary/10 p-4 rounded-full group-hover:bg-primary/20 transition-colors">
-                <item.icon className="size-8 text-primary" />
-              </div>
-              <span className="text-primary font-bold tracking-wider text-sm mb-2 block">
-                {item.step}
-              </span>
-              <h3 className="text-xl font-bold text-text mb-4">{item.title}</h3>
-              <p className="text-text-muted text-sm leading-relaxed">
-                {item.description}
-              </p>
-              
-              {/* 矢印（モバイルでは下、PCでは右） - 最後以外に表示 */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-primary/30"
-                  >
-                    <path
-                      d="M5 12H19M19 12L12 5M19 12L12 19"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+        <div className="mt-12 md:mt-16 relative">
+          {/* Mobile Timeline Line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 md:hidden" />
+          
+          {/* Desktop Timeline Line */}
+          <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-primary/20" />
+
+          <div className="grid md:grid-cols-3 gap-12 relative">
+            {steps.map((step, index) => (
+              <div key={index} className="relative flex md:flex-col gap-6 md:gap-8">
+                {/* Icon/Number Circle */}
+                <div className="relative z-10 shrink-0">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white border-2 border-primary text-primary shadow-sm">
+                    <step.icon className="size-7" />
+                  </div>
+                  <div className="absolute -top-3 -right-3 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">
+                    STEP.{step.number}
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+
+                <div className="pt-2 md:pt-0 md:text-center">
+                  <h3 className="text-xl font-bold text-primary mb-3">
+                    STEP.{step.number} {step.title}
+                  </h3>
+                  <p className="text-text text-sm md:text-base leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

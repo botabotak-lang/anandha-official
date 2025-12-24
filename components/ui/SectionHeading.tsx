@@ -20,12 +20,10 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   const alignment = align === "center" ? "items-center text-center" : "items-start text-left";
   const accentAlignment = align === "center" ? "mx-auto" : "";
-  
-  // Updated colors to match SPEC.md via globals.css variables
-  const titleColor = tone === "light" ? "text-white" : "text-primary"; // Gold
-  const descriptionColor = tone === "light" ? "text-white/90" : "text-text"; // Dark Gray
-  const accentColor = tone === "light" ? "bg-white/60" : "bg-accent"; // Green
-  const eyebrowColor = tone === "light" ? "text-accent" : "text-primary"; // Gold
+  const titleColor = tone === "light" ? "text-white" : "text-primary";
+  const descriptionColor = tone === "light" ? "text-white/90" : "text-text-main";
+  const accentColor = tone === "light" ? "bg-white/60" : "bg-accent";
+  const eyebrowColor = tone === "light" ? "text-accent" : "text-primary";
 
   return (
     <div className={`flex flex-col gap-4 ${alignment}`}>
@@ -47,3 +45,5 @@ export function SectionHeading({
     </div>
   );
 }
+
+

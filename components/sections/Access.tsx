@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin, Clock, Phone } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Access() {
@@ -13,42 +13,49 @@ export function Access() {
         />
 
         <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-12">
-          {/* Info */}
+          {/* Info Table */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-6">耳つぼダイエットサロン Anandha</h3>
-              <div className="space-y-6 text-text">
-                <div className="flex items-start gap-4">
-                  <MapPin className="size-6 text-accent shrink-0 mt-1" />
-                  <div>
-                    <p className="font-bold mb-1">住所</p>
-                    <p>〒426-0201 静岡県藤枝市下藪田３２２</p>
+            <div className="bg-background/50 rounded-2xl p-8 border border-border space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-primary mb-6">耳つぼダイエットサロン Anandha</h3>
+                <dl className="space-y-4 text-text">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="size-5 text-text-muted mt-1 shrink-0" />
+                    <div>
+                      <dt className="sr-only">住所</dt>
+                      <dd>（後ほど入力）</dd>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <Clock className="size-6 text-accent shrink-0 mt-1" />
-                  <div>
-                    <p className="font-bold mb-1">営業時間</p>
-                    <p>9:00 - 20:00 (不定休)</p>
+                  <div className="flex items-start gap-4">
+                    <Clock className="size-5 text-text-muted mt-1 shrink-0" />
+                    <div>
+                      <dt className="sr-only">営業時間</dt>
+                      <dd>9:00 - 20:00 (不定休)</dd>
+                    </div>
                   </div>
-                </div>
+                </dl>
               </div>
             </div>
+            
+            <p className="text-sm text-text-muted">
+              ※ プライベートサロンのため、詳細な住所はご予約確定後にお伝えいたします。<br />
+              ※ 駐車場あり
+            </p>
           </div>
 
-          {/* Map */}
-          <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-md bg-background">
-            <iframe
-              src="https://www.google.com/maps?q=〒426-0201+静岡県藤枝市下藪田322&output=embed&z=16"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Anandha 店舗地図"
-              className="absolute inset-0"
+          {/* Map Image */}
+          <div className="relative h-[300px] md:h-full min-h-[300px] rounded-2xl overflow-hidden shadow-lg border border-border">
+            <Image
+              src="/images/map.jpg"
+              alt="地図"
+              fill
+              className="object-cover"
             />
+            <div className="absolute inset-0 flex items-center justify-center bg-black/5 opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <span className="bg-white/90 px-4 py-2 rounded-full text-sm font-bold text-text shadow-sm">
+                Google Mapsで見る
+              </span>
+            </div>
           </div>
         </div>
       </div>

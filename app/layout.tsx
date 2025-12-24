@@ -15,10 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "藤枝市の耳つぼダイエットサロン Anandha(アナンダ) | 40代からの健康ダイエット",
   description: "藤枝市・焼津市・島田市で耳つぼダイエットならAnandha。運動なし・食事制限なしで、40代〜60代の女性が無理なく痩せるサロンです。無料カウンセリング受付中。",
-  icons: {
-    icon: "/images/anandah-logo.png",
-    apple: "/images/anandah-logo.png",
-  },
 };
 
 export default function RootLayout({
