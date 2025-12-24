@@ -46,7 +46,7 @@ export function Hero() {
       className="relative isolate overflow-hidden rounded-b-[2.5rem] bg-primary text-white"
     >
       {/* スライドショー画像 */}
-      <div className="relative h-[550px] md:h-[650px]">
+      <div className="absolute inset-0 z-0">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -60,38 +60,38 @@ export function Hero() {
               fill
               sizes="100vw"
               priority={index === 0}
-              className="object-cover"
+              className={`object-cover ${index === 0 ? 'object-[center_20%] md:object-top' : 'object-center'}`}
               unoptimized
             />
-            {/* 画像用オーバーレイ - 顔が見えるように上部はクリア、文字が見やすいように下部のみグラデーション */}
+            {/* 画像用オーバーレイ - 全体的に暗くして文字を読みやすくする */}
             <div 
               className={`absolute inset-0 z-10 ${
                 index === 0 
-                  ? "bg-gradient-to-b from-transparent via-transparent to-black/30" 
-                  : "bg-black/30"
+                  ? "bg-gradient-to-b from-transparent via-transparent to-black/60" 
+                  : "bg-black/40"
               }`} 
             />
             
-            {/* キャッチコピー（下部に配置、顔に被らないように） */}
-            <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end z-20 pb-12 px-4 space-y-3">
+            {/* キャッチコピー（スライドショー内テキスト） */}
+            <div className="absolute inset-x-0 bottom-[40%] md:bottom-[35%] flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
-                  <div className="bg-white px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-xl mx-auto">
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-xl mx-auto">
                     <h2 className="text-xl md:text-3xl font-black text-accent tracking-wider text-center">
                       2ヶ月で体重 <span className="text-3xl md:text-5xl text-[#E91E63]">-6kg</span>
                     </h2>
                   </div>
                   
                   {/* 帯デザイン 2: ストーリー */}
-                  <div className="bg-white px-6 py-3 transform rotate-1 shadow-lg w-full max-w-2xl mx-auto mt-1">
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-3 transform rotate-1 shadow-lg w-full max-w-2xl mx-auto mt-1">
                     <p className="text-base md:text-xl font-bold text-text-muted text-center leading-snug">
                       何をしても痩せなかった私が変われた。<br className="md:hidden"/>次は、あなたの番です。
                     </p>
                   </div>
 
                   {/* 名前 */}
-                  <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/90 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
+                  <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/80 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
                     Anandha オーナー 窪田 佑美
                   </p>
                 </>
@@ -108,7 +108,7 @@ export function Hero() {
       </div>
 
       {/* インジケーター（ドット） */}
-      <div className="absolute bottom-6 left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      <div className="absolute top-[60%] left-1/2 z-30 flex -translate-x-1/2 gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -123,42 +123,44 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 py-24">
-        <div className="flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-white/90">
-          <Leaf className="size-4" />
-          Anandah Ear Diet Salon
-        </div>
-        <div className="space-y-6">
-          <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-medium">
-            40代からの身体が変わる。
-            <br className="hidden md:block" />
-            無理なく食べて、美しく痩せる
-            <br className="hidden md:block" />
-            大人のための耳つぼダイエットサロン Anandha
-          </p>
+      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-[650px] pb-24 md:pt-[600px]">
+        <div className="bg-black/30 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/10">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-sm uppercase tracking-[0.3em] text-white/90 mb-6">
+            <Leaf className="size-4" />
+            Anandah Ear Diet Salon
+          </div>
+          <div className="space-y-6 mb-8">
+            <p className="text-lg md:text-2xl text-white leading-relaxed font-bold">
+              40代からの身体が変わる。
+              <br className="hidden md:block" />
+              無理なく食べて、美しく痩せる
+              <br className="hidden md:block" />
+              大人のための耳つぼダイエットサロン Anandha
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 md:flex-row justify-center md:justify-start">
+            <ButtonLink
+              href="https://lin.ee/bbJLZFe"
+              label="LINEで予約する"
+              description="24時間受付"
+              variant="line"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+            {/* Phone button set to surface (White) to contrast with Gold background */}
+            <ButtonLink
+              href="tel:090-5626-2380"
+              label="電話で相談する"
+              description="10:00-19:00 / 日祝休"
+              icon={Phone}
+              variant="surface"
+              className="!text-[#B05D4B] hover:!bg-white/90"
+            />
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4 md:flex-row">
-          <ButtonLink
-            href="https://lin.ee/bbJLZFe"
-            label="LINEで予約する"
-            description="24時間受付"
-            variant="line"
-            target="_blank"
-            rel="noopener noreferrer"
-          />
-          {/* Phone button set to surface (White) to contrast with Gold background */}
-          <ButtonLink
-            href="tel:090-5626-2380"
-            label="電話で相談する"
-            description="10:00-19:00 / 日祝休"
-            icon={Phone}
-            variant="surface"
-            className="!text-[#B05D4B] hover:!bg-white/90"
-          />
-        </div>
-
-        <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-text font-medium">
+        <div className="grid gap-4 rounded-3xl bg-white/95 p-6 text-sm leading-relaxed shadow-xl text-text font-medium mt-4">
           <div className="flex items-center gap-3">
             <Sparkles className="size-5 text-accent shrink-0" />
             <p>耳つぼ＋栄養サポートで「代謝」と「食欲」をやさしく整えます</p>

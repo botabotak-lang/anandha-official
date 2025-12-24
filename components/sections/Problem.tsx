@@ -6,9 +6,9 @@ export function Problem() {
     <section id="problem" className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mx-auto max-w-4xl">
-          <SectionHeading
+        <SectionHeading
             eyebrow="PROBLEM"
-            title="「昔と同じ食事なのに、なぜか太ってしまう」その原因は、年齢による「代謝の低下」かもしれません。"
+          title="「昔と同じ食事なのに、なぜか太ってしまう」その原因は、年齢による「代謝の低下」かもしれません。"
             align="center"
             icon={AlertCircle}
           />
@@ -32,21 +32,21 @@ export function Problem() {
                   <li className="flex gap-3 items-start">
                     <span className="text-primary text-xl">✔</span>
                     <span>「健康診断の数値が悪化して、将来が不安…」</span>
-                  </li>
-                </ul>
+                </li>
+            </ul>
               </div>
 
               <div className="space-y-6">
-                <p>
-                  いろいろなダイエットを試してはリバウンドを繰り返し、「私の意志が弱いから」とご自身を責めてしまっているかもしれません。
-                </p>
+              <p>
+                いろいろなダイエットを試してはリバウンドを繰り返し、「私の意志が弱いから」とご自身を責めてしまっているかもしれません。
+              </p>
                 <p className="font-bold text-primary text-xl border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg">
                   でも、どうか安心してください。<br className="hidden md:block"/>
                   痩せにくいのは、あなたの努力が足りないからではありません。
                 </p>
-                <p>
+              <p>
                   年齢とともに<span className="bg-yellow-100 px-1 font-bold text-text">「基礎代謝」</span>が落ちてしまい、若い頃のようにエネルギーを消費できなくなっているのが大きな原因なのです。
-                </p>
+              </p>
               </div>
             </div>
           </div>

@@ -8,9 +8,9 @@ export function Solution() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         {/* 1. 見出しブロック */}
         <div className="max-w-4xl mx-auto mb-12">
-          <SectionHeading
+        <SectionHeading
             eyebrow="SOLUTION"
-            title="必要なのは「我慢」ではありません。耳つぼで「代謝」と「食欲」のスイッチを入れましょう。"
+          title="必要なのは「我慢」ではありません。耳つぼで「代謝」と「食欲」のスイッチを入れましょう。"
             align="center"
             icon={Sparkles}
           />
@@ -18,11 +18,11 @@ export function Solution() {
 
         {/* 2. 画像ブロック（見出しの下に移動） */}
         <div className="relative h-[300px] md:h-[500px] max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-xl mb-12">
-          <Image
-            src="/images/solution.jpg"
-            alt="耳つぼ施術の様子"
-            fill
-            className="object-cover"
+            <Image
+              src="/images/solution.jpg"
+              alt="耳つぼ施術の様子"
+              fill
+              className="object-cover"
           />
           <div className="absolute inset-0 bg-primary/10" />
         </div>
@@ -50,7 +50,7 @@ export function Solution() {
                   </p>
                 </div>
               </div>
-            </div>
+          </div>
 
             {/* Point 2 */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-border">
@@ -62,18 +62,18 @@ export function Solution() {
                   <h3 className="text-xl font-bold text-primary mb-2">Point 2: 代謝機能を活性化</h3>
                   <p className="text-text-muted text-sm md:text-base">
                     代謝アップのツボも刺激することで、落ちてしまった「燃やす力」を取り戻します
-                  </p>
+                </p>
                 </div>
               </div>
-            </div>
           </div>
+        </div>
 
           <div className="bg-white/50 p-6 rounded-2xl mt-8 text-sm md:text-base border-l-4 border-accent">
             <p className="mb-4">
               針は一切使いません。痛みもなく、目立たない小さな粒を貼るだけ。また、身体への負担を考え、無理な運動もお勧めしていません。
             </p>
             <p className="font-bold text-text">
-              体の内側から「燃えやすい体」へと体質改善を促す。それが、私たちが提案する「人生最後のダイエット」です。
+          体の内側から「燃えやすい体」へと体質改善を促す。それが、私たちが提案する「人生最後のダイエット」です。
             </p>
           </div>
         </div>

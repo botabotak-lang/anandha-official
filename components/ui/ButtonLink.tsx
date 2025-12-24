@@ -38,15 +38,15 @@ const variantClasses: Record<ButtonVariant, string> = {
 function LineLogo({ className }: { className?: string }) {
   return (
     <div className={`relative ${className}`}>
-      <Image
-        src="/images/line-logo.png"
-        alt="LINE"
+    <Image
+      src="/images/line-logo.png"
+      alt="LINE"
         fill
         sizes="24px"
         className="object-contain"
-        priority
-        unoptimized
-      />
+      priority
+      unoptimized
+    />
     </div>
   );
 }
