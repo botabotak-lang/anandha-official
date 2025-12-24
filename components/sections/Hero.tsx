@@ -73,25 +73,25 @@ export function Hero() {
             />
             
             {/* キャッチコピー（下部に配置、顔に被らないように） */}
-            <div className="absolute inset-x-0 bottom-[25%] md:bottom-[20%] flex flex-col items-center justify-end z-20 pb-10 px-4 space-y-4">
+            <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end z-20 pb-12 px-4 space-y-3">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
-                  <div className="bg-white px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-2xl mx-auto">
+                  <div className="bg-white px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-xl mx-auto">
                     <h2 className="text-xl md:text-3xl font-black text-accent tracking-wider text-center">
                       2ヶ月で体重 <span className="text-3xl md:text-5xl text-[#E91E63]">-6kg</span>
                     </h2>
                   </div>
                   
                   {/* 帯デザイン 2: ストーリー */}
-                  <div className="bg-white px-6 py-3 transform rotate-1 shadow-lg w-full max-w-3xl mx-auto mt-2">
-                    <p className="text-lg md:text-2xl font-bold text-text-muted text-center leading-tight">
+                  <div className="bg-white px-6 py-3 transform rotate-1 shadow-lg w-full max-w-2xl mx-auto mt-1">
+                    <p className="text-base md:text-xl font-bold text-text-muted text-center leading-snug">
                       何をしても痩せなかった私が変われた。<br className="md:hidden"/>次は、あなたの番です。
                     </p>
                   </div>
 
                   {/* 名前 */}
-                  <p className="mt-4 text-white text-sm md:text-base font-bold bg-primary/90 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
+                  <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/90 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
                     Anandha オーナー 窪田 佑美
                   </p>
                 </>
