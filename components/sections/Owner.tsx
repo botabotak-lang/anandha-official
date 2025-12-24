@@ -36,6 +36,22 @@ export function Owner() {
             <p>
               その結果、2ヶ月でマイナス6kgの減量に成功。無理なく健康的に痩せられたことに、私自身が一番驚きました。
             </p>
+
+            {/* Before After Image */}
+            <div className="my-8 bg-white p-4 rounded-xl shadow-md border border-border">
+              <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden">
+                <Image
+                  src="/images/before-after.jpg"
+                  alt="オーナー自身のビフォーアフター - 2ヶ月でマイナス6kg達成"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="mt-2 text-center text-sm font-bold text-accent">
+                ▲ 実際の私です。2ヶ月で-6kgを達成しました。
+              </p>
+            </div>
+
             <p>
               「好きな服を着られる喜び」と「健康な体を取り戻す安心感」。この感動を、同じ悩みを持つ同世代の女性に伝えたい。その一心でサロンをオープンしました。
             </p>
