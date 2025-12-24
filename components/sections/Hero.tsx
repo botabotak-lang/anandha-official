@@ -88,7 +88,7 @@ export function Hero() {
 
                   {/* 名前 */}
                   <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/80 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
-                    Anandha オーナー 窪田 佑美
+                    耳つぼダイエットサロン Anandha オーナー 窪田 佑美
                   </p>
                 </>
               ) : (
@@ -129,9 +129,9 @@ export function Hero() {
 
       <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-16 pb-24 md:pt-24">
         <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/10">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-sm uppercase tracking-[0.3em] text-white/80 mb-6">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-sm font-bold tracking-wider text-white/90 mb-6">
             <Leaf className="size-4" />
-            Anandah Ear Diet Salon
+            耳つぼダイエットサロン Anandha
           </div>
           <div className="space-y-6 mb-8">
             <p className="text-lg md:text-2xl text-white leading-relaxed font-bold drop-shadow-sm">
@@ -139,7 +139,7 @@ export function Hero() {
               <br className="hidden md:block" />
               無理なく食べて、美しく痩せる
               <br className="hidden md:block" />
-              大人のための耳つぼダイエットサロン Anandha
+              耳つぼダイエットサロン Anandha
             </p>
           </div>
 

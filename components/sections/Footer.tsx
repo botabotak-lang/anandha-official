@@ -19,13 +19,13 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img
                 src="/images/anandah-logo.png"
-                alt="Anandah Logo"
+                alt="Anandha Logo"
                 className="h-12 w-auto grayscale opacity-80"
               />
-              <span className="text-lg font-light text-text-muted tracking-widest">Anandah</span>
+              <span className="text-lg font-light text-text-muted tracking-widest">Anandha</span>
             </Link>
             <p className="text-xs text-text-muted text-center md:text-left">
-              静岡県藤枝市下藪田のお寺のプライベートサロン
+              静岡県藤枝市下藪田の耳つぼダイエットサロン Anandha
             </p>
           </div>
 

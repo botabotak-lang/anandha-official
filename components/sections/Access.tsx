@@ -58,25 +58,20 @@ export function Access() {
             </div>
           </div>
 
-          {/* Map Image */}
-          <a 
-            href="https://share.google/lIVtnqrUvYvjwshnK" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="relative h-[300px] md:h-full min-h-[300px] rounded-2xl overflow-hidden shadow-lg border border-border group"
-          >
-            <Image
-              src="/images/map.jpg"
-              alt="地図"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/5 group-hover:bg-black/20 transition-all duration-300">
-              <span className="bg-white/90 px-6 py-3 rounded-full text-base font-bold text-text shadow-xl transform group-hover:scale-110 transition-transform">
-                Google Mapsで見る
-              </span>
-            </div>
-          </a>
+          {/* Map Embed */}
+          <div className="relative h-[400px] md:h-full min-h-[450px] rounded-2xl overflow-hidden shadow-lg border border-border">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.3090013627055!2d138.2526323!3d34.8988636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601bb99042b45053%3A0x8686f0302b0f443b!2zQW5hbmRoYSjjgqLjg4rjg7Pjg4ApIOiIsOOBpOOBvOODgOOCpOOCqOODg-ODiOOCteODreODsw!5e0!3m2!1sja!2sjp!4v1735061614740!5m2!1sja!2sjp"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps"
+              className="absolute inset-0"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
