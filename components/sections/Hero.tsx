@@ -13,9 +13,9 @@ const MAIN_COPY_2 = "人生最後のダイエットで、心と体を「健康�
 // スライドショー用の画像リスト
 const heroImages = [
   { 
-    src: "/images/hero.jpg", 
-    alt: "リラックスして笑顔を見せる女性",
-    title: MAIN_COPY_1
+    src: "/images/owner.jpg", 
+    alt: "Anandha オーナーが笑顔でお出迎え",
+    title: "「私にお任せください。\nあなたの最後のダイエットを、全力でサポートします。」"
   },
   { 
     src: "/images/hero-2.jpg", 
@@ -64,7 +64,7 @@ export function Hero() {
               unoptimized
             />
             {/* 画像用オーバーレイ - 文字の可読性確保のため少し濃いめに */}
-            <div className="absolute inset-0 bg-black/30 z-10" />
+            <div className={`absolute inset-0 bg-black/40 z-10 ${index === 0 ? "bg-black/20" : ""}`} />
             
             {/* キャッチコピー（オーバーレイの上） */}
             <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -72,6 +72,11 @@ export function Hero() {
                 <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-5xl leading-loose tracking-wide whitespace-pre-wrap">
                   {image.title}
                 </h2>
+                {index === 0 && (
+                  <p className="mt-4 text-lg md:text-2xl text-white font-medium drop-shadow-md">
+                    Anandha オーナー 窪田 佑美
+                  </p>
+                )}
               </div>
             </div>
           </div>
