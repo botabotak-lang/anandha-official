@@ -69,7 +69,7 @@ export function Hero() {
             />
             
             {/* キャッチコピー（画像に重なる帯デザイン） */}
-            <div className="absolute inset-x-0 top-[20%] md:top-[25%] flex flex-col items-center justify-start z-20 px-4 space-y-3 pointer-events-none">
+            <div className="absolute inset-x-0 bottom-12 md:bottom-16 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
@@ -92,11 +92,19 @@ export function Hero() {
                   </p>
                 </>
               ) : (
-                <div className="bg-black/40 px-6 py-8 rounded-2xl backdrop-blur-sm w-full max-w-lg mx-auto">
-                  <h2 className="text-xl md:text-3xl font-bold text-white drop-shadow-lg leading-relaxed tracking-wide text-center">
-                    {image.title}
-                  </h2>
-                </div>
+                <>
+                  {/* 帯デザイン 1: キャッチコピー（2枚目用） */}
+                  <div className="bg-white/95 backdrop-blur-sm px-8 py-4 transform -rotate-1 shadow-lg w-full max-w-2xl mx-auto">
+                    <h2 className="text-xl md:text-3xl font-black text-accent tracking-wider text-center leading-relaxed">
+                      人生最後のダイエットで、<br className="md:hidden"/>心と体を「健康」へ。
+                    </h2>
+                  </div>
+                  
+                  {/* 名前（2枚目も一応表示） */}
+                  <p className="mt-3 text-white text-xs md:text-sm font-bold bg-primary/80 px-4 py-1 rounded-full shadow-md backdrop-blur-sm">
+                    耳つぼダイエットサロン Anandha
+                  </p>
+                </>
               )}
             </div>
           </div>
@@ -104,7 +112,7 @@ export function Hero() {
       </div>
 
       {/* インジケーター（ドット） - 画像エリアの最下部に配置 */}
-      <div className="absolute top-[420px] md:top-[570px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      <div className="absolute top-[430px] md:top-[580px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
