@@ -69,19 +69,19 @@ export function Hero() {
             />
             
             {/* キャッチコピー（画像に重なる帯デザイン） */}
-            <div className="absolute inset-x-0 bottom-8 flex flex-col items-center justify-end z-20 px-4 space-y-3 pointer-events-none">
+            <div className="absolute inset-x-0 top-[20%] md:top-[25%] flex flex-col items-center justify-start z-20 px-4 space-y-3 pointer-events-none">
               {index === 0 ? (
                 <>
                   {/* 帯デザイン 1: 数値 */}
-                  <div className="bg-white/95 backdrop-blur-sm px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-xl mx-auto">
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-2 transform -rotate-1 shadow-lg w-full max-w-md mx-auto">
                     <h2 className="text-xl md:text-3xl font-black text-accent tracking-wider text-center">
                       2ヶ月で体重 <span className="text-3xl md:text-5xl text-[#E91E63]">-6kg</span>
                     </h2>
                   </div>
                   
                   {/* 帯デザイン 2: ストーリー */}
-                  <div className="bg-white/95 backdrop-blur-sm px-6 py-3 transform rotate-1 shadow-lg w-full max-w-2xl mx-auto mt-1">
-                    <p className="text-base md:text-xl font-bold text-text-muted text-center leading-snug">
+                  <div className="bg-white/95 backdrop-blur-sm px-6 py-3 transform rotate-1 shadow-lg w-full max-w-lg mx-auto mt-1">
+                    <p className="text-base md:text-lg font-bold text-text-muted text-center leading-snug">
                       何をしても痩せなかった私が変われた。<br className="md:hidden"/>次は、あなたの番です。
                     </p>
                   </div>
@@ -92,8 +92,8 @@ export function Hero() {
                   </p>
                 </>
               ) : (
-                <div className="bg-black/40 p-6 rounded-xl backdrop-blur-sm">
-                  <h2 className="text-2xl font-bold text-white drop-shadow-lg md:text-4xl leading-loose tracking-wide whitespace-pre-wrap text-center">
+                <div className="bg-black/40 px-6 py-8 rounded-2xl backdrop-blur-sm w-full max-w-lg mx-auto">
+                  <h2 className="text-xl md:text-3xl font-bold text-white drop-shadow-lg leading-relaxed tracking-wide text-center">
                     {image.title}
                   </h2>
                 </div>
@@ -103,8 +103,8 @@ export function Hero() {
         ))}
       </div>
 
-      {/* インジケーター（ドット） - 画像エリア内に配置 */}
-      <div className="absolute top-[400px] md:top-[550px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
+      {/* インジケーター（ドット） - 画像エリアの最下部に配置 */}
+      <div className="absolute top-[420px] md:top-[570px] left-1/2 z-30 flex -translate-x-1/2 gap-2">
         {heroImages.map((_, index) => (
           <button
             key={index}
@@ -119,14 +119,14 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 py-12 md:py-20">
-        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/20">
-          <div className="flex items-center justify-center md:justify-start gap-2 text-sm uppercase tracking-[0.3em] text-white/90 mb-6">
+      <div className="relative z-30 mx-auto flex max-w-5xl flex-col gap-8 px-5 pt-16 pb-24 md:pt-24">
+        <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 md:p-12 text-center md:text-left shadow-2xl border border-white/10">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-sm uppercase tracking-[0.3em] text-white/80 mb-6">
             <Leaf className="size-4" />
             Anandah Ear Diet Salon
           </div>
           <div className="space-y-6 mb-8">
-            <p className="text-lg md:text-2xl text-white leading-relaxed font-bold">
+            <p className="text-lg md:text-2xl text-white leading-relaxed font-bold drop-shadow-sm">
               40代からの身体が変わる。
               <br className="hidden md:block" />
               無理なく食べて、美しく痩せる
