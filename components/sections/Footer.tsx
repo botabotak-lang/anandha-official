@@ -16,26 +16,26 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo Area */}
           <div className="flex flex-col items-center md:items-start gap-4">
-            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
               <img
                 src="/images/anandah-logo.png"
                 alt="Anandha Logo"
-                className="h-12 w-auto grayscale opacity-80"
+                className="h-16 w-auto grayscale opacity-80"
               />
-              <span className="text-lg font-light text-text-muted tracking-widest">Anandha</span>
+              <span className="text-2xl font-light text-text-muted tracking-widest">Anandha</span>
             </Link>
-            <p className="text-xs text-text-muted text-center md:text-left">
+            <p className="text-base text-text-muted text-center md:text-left font-medium">
               静岡県藤枝市下藪田の耳つぼダイエットサロン Anandha
             </p>
           </div>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-6 md:gap-8">
+          <nav className="flex flex-wrap justify-center gap-8 md:gap-12">
             {footerLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-text-muted hover:text-primary transition-colors"
+                className="text-lg font-bold text-text-muted hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>

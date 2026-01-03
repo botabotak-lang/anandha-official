@@ -47,19 +47,19 @@ export function Flow() {
               <div key={index} className="relative flex md:flex-col gap-6 md:gap-8">
                 {/* Icon/Number Circle */}
                 <div className="relative z-10 shrink-0">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white border-2 border-primary text-primary shadow-sm">
-                    <step.icon className="size-7" />
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white border-4 border-primary text-primary shadow-md">
+                    <step.icon className="size-10" />
                   </div>
-                  <div className="absolute -top-3 -right-3 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">
+                  <div className="absolute -top-4 -right-4 bg-accent text-white text-sm font-black px-3 py-2 rounded-full shadow-sm">
                     STEP.{step.number}
                   </div>
                 </div>
 
-                <div className="pt-2 md:pt-0 md:text-center">
-                  <h3 className="text-xl font-bold text-primary mb-3">
+                <div className="pt-2 md:pt-4 md:text-center">
+                  <h3 className="text-2xl font-black text-primary mb-4">
                     STEP.{step.number} {step.title}
                   </h3>
-                  <p className="text-text text-sm md:text-base leading-relaxed">
+                  <p className="text-text text-lg md:text-xl font-medium leading-relaxed">
                     {step.description}
                   </p>
                 </div>

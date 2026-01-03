@@ -28,7 +28,7 @@ export function Solution() {
         </div>
 
         {/* 3. コンテンツブロック */}
-        <div className="max-w-4xl mx-auto space-y-6 text-base md:text-lg leading-relaxed text-text">
+        <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl leading-relaxed text-text">
           <p>
             Anandha（アナンダ）が提供するのは、医学的根拠に基づいた「耳つぼダイエット」です。
           </p>
@@ -36,44 +36,44 @@ export function Solution() {
             耳には、自律神経や内臓の働きに関わる重要なツボが集中しています。ここに小さな「金粒」を貼ることで、以下の2つの効果を促します。
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
+          <div className="grid md:grid-cols-2 gap-8 mt-10">
             {/* Point 1 */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-border">
-              <div className="flex flex-col items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full shrink-0">
-                  <Brain className="size-6 text-primary" />
+            <div className="bg-white p-8 rounded-3xl shadow-md border border-border">
+              <div className="flex flex-col items-start gap-6">
+                <div className="bg-primary/10 p-4 rounded-full shrink-0">
+                  <Brain className="size-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-2">Point 1: 食欲を自然にコントロール</h3>
-                  <p className="text-text-muted text-sm md:text-base">
+                  <h3 className="text-2xl font-black text-primary mb-4">Point 1: 食欲を自然にコントロール</h3>
+                  <p className="text-text font-bold text-lg md:text-xl">
                     食欲中枢を穏やかに刺激し、「食べたい」という衝動を落ち着かせます
                   </p>
                 </div>
               </div>
-          </div>
+            </div>
 
             {/* Point 2 */}
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-border">
-              <div className="flex flex-col items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-full shrink-0">
-                  <Flame className="size-6 text-primary" />
+            <div className="bg-white p-8 rounded-3xl shadow-md border border-border">
+              <div className="flex flex-col items-start gap-6">
+                <div className="bg-primary/10 p-4 rounded-full shrink-0">
+                  <Flame className="size-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-2">Point 2: 代謝機能を活性化</h3>
-                  <p className="text-text-muted text-sm md:text-base">
+                  <h3 className="text-2xl font-black text-primary mb-4">Point 2: 代謝機能を活性化</h3>
+                  <p className="text-text font-bold text-lg md:text-xl">
                     代謝アップのツボも刺激することで、落ちてしまった「燃やす力」を取り戻します
-                </p>
+                  </p>
                 </div>
               </div>
+            </div>
           </div>
-        </div>
 
-          <div className="bg-white/50 p-6 rounded-2xl mt-8 text-sm md:text-base border-l-4 border-accent">
-            <p className="mb-4">
+          <div className="bg-white/80 p-8 rounded-3xl mt-12 text-lg md:text-xl border-l-8 border-accent shadow-sm">
+            <p className="mb-6">
               針は一切使いません。痛みもなく、目立たない小さな粒を貼るだけ。また、身体への負担を考え、無理な運動もお勧めしていません。
             </p>
-            <p className="font-bold text-text">
-          体の内側から「燃えやすい体」へと体質改善を促す。それが、私たちが提案する「人生最後のダイエット」です。
+            <p className="font-black text-text text-xl md:text-2xl leading-tight">
+              体の内側から「燃えやすい体」へと体質改善を促す。それが、私たちが提案する「人生最後のダイエット」です。
             </p>
           </div>
         </div>

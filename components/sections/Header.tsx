@@ -50,41 +50,41 @@ export function Header() {
       {/* モバイルハンバーガーボタン（常に表示） */}
       <button
         onClick={toggleMenu}
-        className="fixed top-4 right-4 z-[60] flex items-center justify-center rounded-full bg-white/95 backdrop-blur-sm border border-border shadow-lg p-3 md:hidden"
+        className="fixed top-4 right-4 z-[60] flex items-center justify-center rounded-full bg-white/95 backdrop-blur-sm border-2 border-border shadow-2xl p-4 md:hidden"
         aria-label="メニューを開く"
         aria-expanded={isMenuOpen}
       >
         {isMenuOpen ? (
-          <X className="size-6 text-text" />
+          <X className="size-8 text-text" />
         ) : (
-          <MenuIcon className="size-6 text-text" />
+          <MenuIcon className="size-8 text-text" />
         )}
       </button>
 
       <header 
-        className={`sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur-sm transition-transform duration-300 ${
+        className={`sticky top-0 z-40 border-b-2 border-border bg-white/95 backdrop-blur-sm transition-transform duration-300 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 md:py-5">
-          <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 md:py-6">
+          <Link href="/" className="flex items-center gap-4 transition-opacity hover:opacity-80">
             <img
               src="/images/anandah-logo.png"
               alt="耳つぼダイエットサロン Anandha"
-              className="h-12 w-auto md:h-16"
+              className="h-16 w-auto md:h-20"
             />
             <div className="flex flex-col leading-tight">
-              <span className="text-sm font-normal text-text-muted tracking-wide md:text-base">
+              <span className="text-base font-bold text-text-muted tracking-wide md:text-lg">
                 耳つぼダイエットサロン
               </span>
-              <span className="text-xl font-light text-primary tracking-wider md:text-3xl">
+              <span className="text-2xl font-light text-primary tracking-wider md:text-4xl">
                 Anandha
               </span>
             </div>
           </Link>
           
           {/* デスクトップメニュー */}
-          <nav className="hidden items-center gap-6 text-sm font-medium md:flex md:gap-8">
+          <nav className="hidden items-center gap-8 text-lg font-bold md:flex md:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

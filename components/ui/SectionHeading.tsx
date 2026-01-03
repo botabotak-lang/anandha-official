@@ -29,15 +29,15 @@ export function SectionHeading({
     <div className={`flex flex-col gap-4 ${alignment}`}>
       {eyebrow && (
         <div
-          className={`flex items-center gap-2 text-sm font-medium uppercase tracking-[0.2em] ${eyebrowColor}`}
+          className={`flex items-center gap-2 text-base font-bold uppercase tracking-[0.2em] ${eyebrowColor}`}
         >
-          {Icon && <Icon className="size-4" />}
+          {Icon && <Icon className="size-5" />}
           {eyebrow}
         </div>
       )}
-      <h2 className={`text-2xl font-bold md:text-3xl ${titleColor}`}>{title}</h2>
+      <h2 className={`text-3xl font-black md:text-5xl ${titleColor} leading-tight`}>{title}</h2>
       {description && (
-        <p className={`text-base md:text-lg leading-relaxed max-w-3xl ${descriptionColor}`}>
+        <p className={`text-lg md:text-xl leading-relaxed max-w-3xl ${descriptionColor}`}>
           {description}
         </p>
       )}

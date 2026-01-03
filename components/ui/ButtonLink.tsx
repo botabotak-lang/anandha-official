@@ -62,7 +62,7 @@ export function ButtonLink({
   description,
 }: ButtonLinkProps) {
   // classNameから背景色関連のクラスを除外（variantが優先されるように）
-  const baseClasses = "flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-4 text-base font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:flex-none md:px-8";
+  const baseClasses = "flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-4 text-lg font-bold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:flex-none md:px-10 md:py-5";
   
   // variantのスタイルを確実に適用するため、classNameの後に配置
   const classes = [
@@ -76,15 +76,15 @@ export function ButtonLink({
   return (
     <Link href={href} target={target} rel={rel} className={classes}>
       {variant === "line" ? (
-        <LineLogo className="h-6 w-6 shrink-0 flex-shrink-0" />
+        <LineLogo className="h-7 w-7 shrink-0 flex-shrink-0" />
       ) : Icon ? (
-        <Icon className="size-5" />
+        <Icon className="size-6" />
       ) : null}
       <span className="flex flex-col leading-tight text-left">
         {label}
         {description && (
           <span
-            className={`text-xs font-normal ${
+            className={`text-sm font-medium ${
               variant === "primary" || variant === "secondary"
                 ? "text-white/90"
                 : variant === "line"

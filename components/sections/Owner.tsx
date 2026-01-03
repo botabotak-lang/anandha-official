@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export function Owner() {
   return (
@@ -7,37 +10,34 @@ export function Owner() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="OWNER MESSAGE"
-          title="私も、過去に「痩せない悩み」を抱えていました。"
+          title="「痩せる」だけではありません。将来の医療費を節約する、賢い健康投資です。"
           align="center"
         />
 
         <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
-          {/* Image */}
+          {/* オーナー画像 */}
           <div className="relative w-full md:w-1/2 aspect-[3/4] md:aspect-square max-w-md rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
             <Image
               src="/images/owner.jpg"
-              alt="Anandha オーナー 窪田佑美"
+              alt="Anandha ダイエットカウンセラー 窪田佑美"
               fill
               className="object-cover"
             />
           </div>
 
-          {/* Text */}
+          {/* メッセージコンテンツ */}
           <div className="w-full md:w-1/2 space-y-6">
             <div className="space-y-2">
-              <p className="text-sm text-text-muted tracking-wider">Anandha オーナー</p>
-              <h3 className="text-2xl font-bold text-primary">窪田 佑美</h3>
+              <p className="text-sm text-accent font-bold tracking-wider">ダイエットカウンセラー</p>
+              <h3 className="text-3xl font-bold text-primary">窪田 佑美</h3>
             </div>
 
-            <div className="space-y-4 text-base md:text-lg leading-relaxed text-text">
+            <div className="space-y-6 text-base md:text-lg leading-relaxed text-text">
               <p>
-                はじめまして。今でこそこうして皆様にダイエットのアドバイスをさせていただいていますが、実は私自身も、過去には体重増加に悩み、何をしても痩せられない時期がありました。
+                はじめまして。今でこそダイエットカウンセラーとして皆様に伴走していますが、私自身も40歳を過ぎてから、これまでのやり方では全く痩せられなくなる「40代の壁」に直面しました。
               </p>
               <p>
-                40代を過ぎて代謝が落ち、自己流のダイエットでは限界を感じていた時に、この耳つぼダイエットに出会いました。
-              </p>
-              <p>
-                その結果、2ヶ月でマイナス6kgの減量に成功。無理なく健康的に痩せられたことに、私自身が一番驚きました。
+                鏡を見るのが嫌になり、健康診断の結果に怯え、家族に迷惑をかけたくないという焦りを感じる日々。私自身がその辛さを誰よりも知っています。
               </p>
 
               {/* Before After Image */}
@@ -55,13 +55,38 @@ export function Owner() {
                   ▲ 実際の私です。2ヶ月で-6kgを達成しました。
                 </p>
               </div>
+              
+              <div className="bg-white/60 p-6 rounded-2xl border-l-4 border-accent shadow-sm italic">
+                「これは美容という贅沢ではなく、一生を笑顔で過ごすための『健康投資』なのだ」
+              </div>
 
               <p>
-                「好きな服を着られる喜び」と「健康な体を取り戻す安心感」。この感動を、同じ悩みを持つ同世代の女性に伝えたい。その一心でサロンをオープンしました。
+                耳つぼを通じた体質改善に出会い、私自身も2ヶ月で-6kgという変化を実感しました（※）。しかし、何より嬉しかったのは、将来への不安が消え、自分に自信を取り戻せたことです。
               </p>
-              <p className="font-bold text-primary pt-2">
-                痩せることを目的とするだけでなく、その先にある「笑顔で過ごす毎日」を一緒に叶えましょう。私が全力でサポートいたします。
+              
+              <p>
+                Anandha（アナンダ）のプログラムは、単に一時的な数字を追うものではありません。3ヶ月かけて、お寺という誠実な場所で、一生モノの「痩せ習慣」を一緒に作っていきます。
               </p>
+              
+              <p className="font-bold text-primary">
+                10年後のあなたとご家族の笑顔のために。勇気を持って踏み出すその一歩を、私が全力でサポートいたします。
+              </p>
+              
+              <p className="text-xs text-text-muted mt-4">
+                ※オーナー個人の体験談です。結果には個人差があり、3ヶ月を目安としたプログラムを提供しています。
+              </p>
+            </div>
+
+            <div className="pt-8 flex justify-center md:justify-start">
+              <ButtonLink
+                href="https://lin.ee/bbJLZFe"
+                label="今すぐ体験を予約する"
+                description="LINEで24時間受付中"
+                variant="line"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full md:w-auto shadow-2xl !px-12 !py-6 !text-xl"
+              />
             </div>
           </div>
         </div>

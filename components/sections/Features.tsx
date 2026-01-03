@@ -32,26 +32,26 @@ export function Features() {
           align="center"
         />
 
-        <div className="mt-12 md:mt-16 grid md:grid-cols-3 gap-8">
+        <div className="mt-12 md:mt-20 grid md:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative flex flex-col items-center text-center bg-background/30 p-8 rounded-[2rem] border border-border transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white"
+              className="group relative flex flex-col items-center text-center bg-background/30 p-10 rounded-[2.5rem] border-2 border-border transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white hover:border-primary/30"
             >
               {/* Number Badge */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-black text-xl shadow-lg">
                 {index + 1}
               </div>
 
-              <div className="mb-6 bg-white p-4 rounded-full shadow-sm group-hover:shadow-md transition-shadow">
-                <feature.icon className="size-8 md:size-10 text-accent" />
+              <div className="mb-8 bg-white p-5 rounded-full shadow-md group-hover:shadow-lg transition-shadow">
+                <feature.icon className="size-10 md:size-12 text-accent" />
               </div>
               
-              <h3 className="text-xl font-bold text-primary mb-4 whitespace-pre-wrap leading-snug min-h-[3.5rem] flex items-center justify-center">
+              <h3 className="text-2xl font-black text-primary mb-6 whitespace-pre-wrap leading-tight min-h-[4rem] flex items-center justify-center">
                 {feature.title}
               </h3>
               
-              <p className="text-text text-sm md:text-base leading-relaxed text-justify">
+              <p className="text-text text-lg md:text-xl font-bold leading-relaxed text-justify">
                 {feature.description}
               </p>
             </div>

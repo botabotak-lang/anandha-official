@@ -15,19 +15,19 @@ export function Access() {
         <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-12">
           {/* Info Table */}
           <div className="space-y-8">
-            <div className="bg-background/50 rounded-2xl p-8 border border-border space-y-6">
+            <div className="bg-background/50 rounded-3xl p-10 border-2 border-border space-y-8 shadow-sm">
               <div>
-                <h3 className="text-xl font-bold text-primary mb-6">耳つぼダイエットサロン Anandha</h3>
-                <dl className="space-y-4 text-text">
-                  <div className="flex items-start gap-4">
-                    <MapPin className="size-5 text-text-muted mt-1 shrink-0" />
+                <h3 className="text-2xl font-black text-primary mb-8">耳つぼダイエットサロン Anandha</h3>
+                <dl className="space-y-6 text-lg md:text-xl font-bold text-text">
+                  <div className="flex items-start gap-5">
+                    <MapPin className="size-7 text-text-muted mt-1 shrink-0" />
                     <div>
                       <dt className="sr-only">住所</dt>
                       <dd>〒426-0005 静岡県藤枝市下藪田322</dd>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <Clock className="size-5 text-text-muted mt-1 shrink-0" />
+                  <div className="flex items-start gap-5">
+                    <Clock className="size-7 text-text-muted mt-1 shrink-0" />
                     <div>
                       <dt className="sr-only">営業時間</dt>
                       <dd>
@@ -40,18 +40,18 @@ export function Access() {
               </div>
             </div>
             
-            <div className="bg-stone-50 rounded-2xl p-6 border border-border">
-              <ul className="space-y-2 text-sm text-text font-medium">
-                <li className="flex items-center gap-2">
-                  <span className="size-1.5 rounded-full bg-accent" />
+            <div className="bg-stone-50 rounded-3xl p-8 border-2 border-border shadow-sm">
+              <ul className="space-y-4 text-lg md:text-xl text-text font-black">
+                <li className="flex items-center gap-3">
+                  <span className="size-2.5 rounded-full bg-accent" />
                   駐車場あり
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="size-1.5 rounded-full bg-accent" />
+                <li className="flex items-center gap-3">
+                  <span className="size-2.5 rounded-full bg-accent" />
                   出張対応可
                 </li>
-                <li className="flex items-center gap-2 text-accent">
-                  <span className="size-1.5 rounded-full bg-accent" />
+                <li className="flex items-center gap-3 text-accent">
+                  <span className="size-2.5 rounded-full bg-accent" />
                   完全個室
                 </li>
               </ul>
