@@ -28,7 +28,7 @@ export function Campaign() {
 
           <div className="px-6 py-16 md:px-14 md:py-20 flex flex-col gap-8 items-center">
             <h3 className="text-2xl md:text-3xl font-black text-text mt-6">
-              カウンセリング(無料) ＋ 耳つぼ施術体験
+              初回カウンセリング（無料）＋ 耳つぼ施術体験
             </h3>
             
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">

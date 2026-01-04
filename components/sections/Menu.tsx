@@ -27,7 +27,7 @@ export function Menu() {
           <div className="w-full md:w-1/2 space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl md:text-4xl font-black text-secondary leading-tight">
-                耳つぼダイエット<br className="sm:hidden"/>【初回カウンセリング】
+                耳つぼダイエット<br className="sm:hidden"/>【初回カウンセリング＋耳つぼ施術体験】
               </h3>
               <p className="text-2xl md:text-3xl font-bold text-text-muted">
                 3,080円 <span className="text-lg md:text-xl">(税込)</span>
@@ -43,15 +43,19 @@ export function Menu() {
                 <ul className="pl-4 space-y-3 font-bold">
                   <li className="flex items-center gap-2">
                     <span className="size-2 rounded-full bg-primary/30" />
-                    ヒアリング
+                    現在の健康状態・食生活のヒアリング
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="size-2 rounded-full bg-primary/30" />
-                    減量シミュレーション
+                    体重測定（基礎代謝・体脂肪率の測定）
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="size-2 rounded-full bg-primary/30" />
-                    耳ツボ体験
+                    耳つぼ痩身プログラムの提案・詳細説明
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="size-2 rounded-full bg-primary/30" />
+                    耳つぼ施術体験
                   </li>
                 </ul>
               </div>
@@ -91,6 +95,17 @@ export function Menu() {
                 <p className="pl-4 text-base md:text-lg text-text-muted font-bold leading-relaxed pt-2">
                   ※皮内針は使用いたしませんので特に痛みはございません。
                 </p>
+              </div>
+
+              {/* 注意事項・詳細 */}
+              <div className="pt-6 border-t border-border">
+                <p className="text-sm md:text-base text-text-muted font-bold leading-relaxed">
+                  1クール3ヶ月間の耳つぼ痩身プログラムとなります。
+                </p>
+                <ul className="mt-2 space-y-1 text-sm md:text-base text-text-muted font-medium">
+                  <li>・耳つぼ施術・材料費込 1回3,080円～</li>
+                  <li>・栄養バランスを整える為のスーパーフード 別途(お身体の状態によっても異なります)</li>
+                </ul>
               </div>
             </div>
           </div>

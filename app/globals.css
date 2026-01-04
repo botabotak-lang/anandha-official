@@ -35,6 +35,16 @@
   }
   --animate-fade-in-up: fade-in-up 1.2s cubic-bezier(0.21, 0.45, 0.32, 0.9) forwards;
 
+  @keyframes pulse-subtle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+  --animate-pulse-subtle: pulse-subtle 2s infinite ease-in-out;
+
   /* Fonts */
   --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
 }

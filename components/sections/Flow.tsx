@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MessageCircleHeart, Sparkles, Trophy } from "lucide-react";
 
@@ -8,6 +9,7 @@ const steps = [
     description:
       "90分ほどで、あなたに最適なダイエットプランをご提案します。期間や料金も事前に分かるのでご安心ください。",
     icon: MessageCircleHeart,
+    image: "/images/カウンセリング風景.webp",
   },
   {
     number: "02",
@@ -15,6 +17,7 @@ const steps = [
     description:
       "「これならできそう！」と思えたら、お申し込みください。耳つぼ施術は1回15分ほど、週2回お越しください。",
     icon: Sparkles,
+    image: "/images/ダイエット開始.webp",
   },
   {
     number: "03",
@@ -22,6 +25,7 @@ const steps = [
     description:
       "目標体重に達したら、卒業です。無料アフターフォローがあるので、リバウンドの心配もありません。",
     icon: Trophy,
+    image: "/images/アフターフォロー.webp",
   },
 ];
 
@@ -59,6 +63,18 @@ export function Flow() {
                   <h3 className="text-2xl font-black text-primary mb-4">
                     STEP.{step.number} {step.title}
                   </h3>
+
+                  {step.image && (
+                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-md mb-6 border border-primary/10">
+                      <Image
+                        src={step.image}
+                        alt={`${step.title}の様子`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+
                   <p className="text-text text-lg md:text-xl font-medium leading-relaxed">
                     {step.description}
                   </p>

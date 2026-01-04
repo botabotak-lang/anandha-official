@@ -15,7 +15,7 @@ export function Owner() {
         />
 
         <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
-          {/* オーナー画像 */}
+          {/* オーナー画像 - 施術風景が見えるように aspect-ratio を調整 */}
           <div className="relative w-full md:w-1/2 aspect-[4/3] max-w-xl rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
             <Image
               src="/images/owner.webp"
@@ -77,6 +77,7 @@ export function Owner() {
               </p>
             </div>
 
+            {/* CTAボタン */}
             <div className="pt-8 flex justify-center md:justify-start">
               <ButtonLink
                 href="https://lin.ee/bbJLZFe"
