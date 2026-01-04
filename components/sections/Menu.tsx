@@ -67,9 +67,6 @@ export function Menu() {
                 </h4>
                 <div className="pl-4 space-y-3">
                   <p className="font-bold text-xl">1〜1.5時間</p>
-                  <p className="text-lg md:text-xl text-secondary font-black">
-                    ※相談だけでもOK！無理な勧誘はありません。
-                  </p>
                 </div>
               </div>
 

@@ -23,7 +23,10 @@ export function Access() {
                     <MapPin className="size-7 text-text-muted mt-1 shrink-0" />
                     <div>
                       <dt className="sr-only">住所</dt>
-                      <dd>〒426-0005 静岡県藤枝市下藪田322</dd>
+                      <dd>
+                        〒426-0005 静岡県藤枝市下藪田322<br />
+                        最林寺内
+                      </dd>
                     </div>
                   </div>
                   <div className="flex items-start gap-5">
