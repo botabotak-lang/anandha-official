@@ -9,6 +9,7 @@ import { Menu } from "@/components/sections/Menu";
 import { Owner } from "@/components/sections/Owner";
 import { Problem } from "@/components/sections/Problem";
 import { Solution } from "@/components/sections/Solution";
+import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
           <Flow />
           <Menu />
           <Campaign />
+          <FAQ />
           <Access />
           <CTASection />
         </div>
