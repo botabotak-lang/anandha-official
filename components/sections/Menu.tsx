@@ -15,7 +15,7 @@ export function Menu() {
           {/* 左側：画像 */}
           <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl">
             <Image
-              src="/images/counseling.jpg"
+              src="/images/施術風景.webp"
               alt="施術の様子"
               fill
               className="object-cover"

@@ -16,12 +16,12 @@ export function Owner() {
 
         <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* オーナー画像 */}
-          <div className="relative w-full md:w-1/2 aspect-[3/4] md:aspect-square max-w-md rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
+          <div className="relative w-full md:w-1/2 aspect-[4/3] max-w-xl rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
             <Image
-              src="/images/owner.jpg"
+              src="/images/owner.webp"
               alt="Anandha ダイエットカウンセラー 窪田佑美"
               fill
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
 

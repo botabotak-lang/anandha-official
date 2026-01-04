@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export function Hero() {
   return (
@@ -9,36 +8,18 @@ export function Hero() {
       {/* 
         画像コンテナ: 
         - スマホで幅一杯、PC/タブレットでは500pxに制限
-        - ボタン配置のために relative を指定
       */}
       <div className="relative w-full md:max-w-[500px] mx-auto shadow-xl overflow-hidden bg-white">
         
-        {/* メインのSVG画像（スマホ用デザイン1枚） */}
+        {/* メインのSVG画像（スマホ用デザイン1枚：TOP_hero3.svg） */}
         <div className="w-full">
           <Image
-            src="/images/TOP_hero2.svg"
-            alt="3ヶ月で平均-10kgを目指す耳つぼダイエット。運動なし・無理な食事制限なし・お寺のプライベートサロン。"
+            src="/images/TOP_hero3.svg"
+            alt="お寺で整える、40代・50代からの人生最後の体質改善。3ヶ月で平均-10kgを目指す耳つぼダイエット。"
             width={500}
             height={800}
             className="w-full h-auto block"
             priority
-          />
-        </div>
-
-        {/* 
-          CTAボタンエリア:
-          - 画像内の「WEB予約割引」テキストと被らないよう、極限まで下に配置（bottom-1）
-          - ボタンの高さを抑えて可読性を確保（!py-3）
-        */}
-        <div className="absolute bottom-1.5 left-0 w-full px-8 flex justify-center">
-          <ButtonLink
-            href="https://lin.ee/bbJLZFe"
-            label="今すぐ体験を予約する"
-            description="LINEで24時間受付中"
-            variant="line"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-auto shadow-2xl !px-6 !py-2 !text-xs md:!px-10 md:!py-5 md:!text-xl"
           />
         </div>
       </div>
