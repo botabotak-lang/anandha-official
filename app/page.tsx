@@ -4,6 +4,7 @@ import { CTASection, StickyCTA } from "@/components/sections/CTA";
 import { Features } from "@/components/sections/Features";
 import { Flow } from "@/components/sections/Flow";
 import { Header } from "@/components/sections/Header";
+import { QuickNav } from "@/components/sections/QuickNav";
 import { Hero } from "@/components/sections/Hero";
 import { Menu } from "@/components/sections/Menu";
 import { Owner } from "@/components/sections/Owner";
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="bg-background text-text-main">
       <Header />
       <main className="flex flex-col gap-0">
+        <QuickNav />
         <Hero />
         <div className="space-y-0">
           <Owner />
