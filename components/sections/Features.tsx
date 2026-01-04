@@ -7,22 +7,22 @@ const features = [
     icon: Armchair,
     title: "つらい運動は\n必要ありません",
     description:
-      "ダイエットのために、苦手な運動を無理に始める必要はありません。代謝が落ちている状態で激しく動くと、かえって食欲が増したり、関節を痛める原因になることも。家事や日常の動きだけで十分です。",
-    image: "/images/辛い運動は.webp",
+      "ダイエットのために, 苦手な運動を無理に始める必要はありません。代謝が落ちている状態で激しく動くと, かえって食欲が増したり, 関節を痛める原因になることも。家事や日常の動きだけで十分です。",
+    image: "/images/feature-exercise.webp",
   },
   {
     icon: Utensils,
     title: "無理な食事制限なし＆\nプロの栄養サポート",
     description:
-      "極端に食べないダイエットは筋肉を落とし、リバウンドのもと。必要な栄養を摂りながら「燃やす力」を育てます。お酒や外食もOK。おつまみの選び方や外食での食べ方も、一緒に考えていきます。",
-    image: "/images/食事制限なし.webp",
+      "極端に食べないダイエットは筋肉を落とし, リバウンドのもと。必要な栄養を摂りながら「燃やす力」を育てます。お酒や外食もOK。おつまみの選び方や外食での食べ方も、一緒に考えていきます。",
+    image: "/images/feature-diet.webp",
   },
   {
     icon: Landmark,
     title: "お寺で整える\n特別なプライベート空間",
     description:
-      "忙しい日常から離れ、静寂に包まれたお寺での施術。ここは、心と体を一度リセットするための場所です。誰にも知られず、あなただけの落ち着いた時間の中で、誠実に向き合いサポートいたします。",
-    image: "/images/お寺.webp",
+      "忙しい日常から離れ, 静寂に包まれたお寺での施術。ここは, 心と体を一度リセットするための場所です。誰にも知られず, あなただけの落ち着いた時間の中で, 誠実に向き合いサポートいたします。",
+    image: "/images/feature-temple.webp",
   },
 ];
 
@@ -55,7 +55,7 @@ export function Features() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
                 <div className="absolute bottom-4 left-4 bg-white p-3 rounded-2xl shadow-lg">
                   <feature.icon className="size-6 md:size-8 text-accent" />
                 </div>

@@ -7,25 +7,25 @@ const steps = [
     number: "01",
     title: "カウンセリング",
     description:
-      "90分ほどで、あなたに最適なダイエットプランをご提案します。期間や料金も事前に分かるのでご安心ください。",
+      "90分ほどで, あなたに最適なダイエットプランをご提案します。期間や料金も事前に分かるのでご安心ください。",
     icon: MessageCircleHeart,
-    image: "/images/カウンセリング風景.webp",
+    image: "/images/flow_1.webp",
   },
   {
     number: "02",
     title: "ダイエット開始",
     description:
-      "「これならできそう！」と思えたら、お申し込みください。耳つぼ施術は1回15分ほど、週2回お越しください。",
+      "「これならできそう！」と思えたら, お申し込みください。耳つぼ施術は1回15分ほど, 週2回お越しください。",
     icon: Sparkles,
-    image: "/images/ダイエット開始.webp",
+    image: "/images/flow_2.webp",
   },
   {
     number: "03",
     title: "卒業",
     description:
-      "目標体重に達したら、卒業です。無料アフターフォローがあるので、リバウンドの心配もありません。",
+      "目標体重に達したら, 卒業です。無料アフターフォローがあるので, リバウンドの心配もありません。",
     icon: Trophy,
-    image: "/images/アフターフォロー.webp",
+    image: "/images/flow_3.webp",
   },
 ];
 
