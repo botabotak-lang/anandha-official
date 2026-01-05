@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -56,19 +56,7 @@ export default function RootLayout({
       <body
         className={`${notoSansJP.variable} font-sans antialiased text-text bg-background`}
       >
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-TV7RJFN3EB`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-TV7RJFN3EB');
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-TV7RJFN3EB" />
         {children}
         <script
           type="application/ld+json"
