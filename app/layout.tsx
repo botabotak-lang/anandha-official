@@ -11,8 +11,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "耳つぼダイエットサロン Anandha(アナンダ) | 藤枝市の40代からの健康ダイエット",
-  description: "藤枝市下藪田の耳つぼダイエットサロンAnandha。運動なし・食事制限なしで、40代〜60代の女性が無理なく痩せるサポートをします。無料カウンセリング受付中。",
+  title: "耳つぼダイエットサロン Anandah(アナンダ) | 藤枝市の40代からの健康ダイエット",
+  description: "藤枝市下藪田の耳つぼダイエットサロンAnandah。運動なし・食事制限なしで、40代〜60代の女性が無理なく痩せるサポートをします。無料カウンセリング受付中。",
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
@@ -27,7 +27,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    "name": "耳つぼダイエットサロン Anandha",
+    "name": "耳つぼダイエットサロン Anandah",
     "image": "/images/hero.jpg",
     "address": {
       "@type": "PostalAddress",

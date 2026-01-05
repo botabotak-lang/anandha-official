@@ -30,7 +30,7 @@ export function Solution() {
         {/* 3. コンテンツブロック */}
         <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl leading-relaxed text-text">
           <p>
-            Anandha（アナンダ）が提供するのは、医学的根拠に基づいた「耳つぼダイエット」です。
+            Anandah（アナンダ）が提供するのは、医学的根拠に基づいた「耳つぼダイエット」です。
           </p>
           <p>
             耳には、自律神経や内臓の働きに関わる重要なツボが集中しています。ここに小さな「金粒」を貼ることで、以下の2つの効果を促します。

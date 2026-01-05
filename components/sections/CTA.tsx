@@ -44,35 +44,35 @@ export function CTASection() {
 
 export function StickyCTA() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t-2 border-border p-5 md:hidden shadow-[0_-8px_30px_rgba(0,0,0,0.1)] animate-in slide-in-from-bottom duration-500">
-      <div className="flex items-center gap-4 max-w-md mx-auto">
-        <div className="grid grid-cols-2 gap-4 flex-1">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t-2 border-border p-3 md:hidden shadow-[0_-8px_30px_rgba(0,0,0,0.1)] animate-in slide-in-from-bottom duration-500">
+      <div className="flex items-center gap-2 max-w-md mx-auto">
+        <div className="grid grid-cols-2 gap-2 flex-1">
           <ButtonLink
             href="https://lin.ee/bbJLZFe"
             label="LINE予約"
             variant="line"
             target="_blank"
-            className="px-2 py-4 text-lg font-black rounded-2xl shadow-none"
+            className="px-2 py-3 text-base font-bold rounded-xl shadow-none"
           />
           <ButtonLink
             href="tel:090-5626-2380"
             label="電話予約"
             variant="primary"
             icon={Phone}
-            className="px-2 py-4 text-lg font-black rounded-2xl shadow-none"
+            className="px-2 py-3 text-base font-bold rounded-xl shadow-none"
           />
         </div>
         <Link
           href="https://www.instagram.com/anandah_diet/?igsh=MWVyaXhuZ2RrM3A1ZQ%3D%3D#"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center size-12 rounded-xl bg-stone-100 border border-border transition-colors hover:bg-stone-200"
+          className="flex items-center justify-center size-11 rounded-xl bg-stone-100 border border-border transition-colors hover:bg-stone-200"
           aria-label="Instagramを開く"
         >
           <img
             src="/images/Instagram.png"
             alt="Instagram"
-            className="size-6"
+            className="size-5"
           />
         </Link>
       </div>

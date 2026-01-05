@@ -19,13 +19,13 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
               <img
                 src="/images/anandah-logo.png"
-                alt="Anandha Logo"
+                alt="Anandah Logo"
                 className="h-16 w-auto grayscale opacity-80"
               />
-              <span className="text-2xl font-light text-text-muted tracking-widest">Anandha</span>
+              <span className="text-2xl font-light text-text-muted tracking-widest">Anandah</span>
             </Link>
             <p className="text-base text-text-muted text-center md:text-left font-medium">
-              静岡県藤枝市下藪田の耳つぼダイエットサロン Anandha
+              静岡県藤枝市下藪田の耳つぼダイエットサロン Anandah
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-gray-200 text-center">
           <p className="text-xs text-text-muted">
-            &copy; {new Date().getFullYear()} Anandha. All rights reserved.
+            &copy; {new Date().getFullYear()} Anandah. All rights reserved.
           </p>
         </div>
       </div>

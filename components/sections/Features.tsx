@@ -32,7 +32,7 @@ export function Features() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="FEATURES"
-          title="Anandhaが選ばれる3つの理由"
+          title="Anandahが選ばれる3つの理由"
           align="center"
         />
 

@@ -45,7 +45,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-4 transition-opacity hover:opacity-80">
           <img
             src="/images/anandah-logo.png"
-            alt="耳つぼダイエットサロン Anandha"
+            alt="耳つぼダイエットサロン Anandah"
             className="h-16 w-auto md:h-20"
           />
           <div className="flex flex-col leading-tight">
@@ -53,7 +53,7 @@ export function Header() {
               耳つぼダイエットサロン
             </span>
             <span className="text-2xl font-light text-primary tracking-wider md:text-4xl">
-              Anandha
+              Anandah
             </span>
           </div>
         </Link>

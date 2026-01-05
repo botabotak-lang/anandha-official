@@ -80,7 +80,7 @@ export function ButtonLink({
       ) : Icon ? (
         <Icon className="size-6" />
       ) : null}
-      <span className="flex flex-col leading-tight text-left">
+      <span className="flex flex-col leading-tight text-left whitespace-nowrap">
         {label}
         {description && (
           <span
