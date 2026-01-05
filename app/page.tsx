@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <div className="bg-background text-text-main">
       <Header />
+      <QuickNav />
       <main className="flex flex-col gap-0">
-        <QuickNav />
         <Hero />
         <div className="space-y-0">
           <Owner />

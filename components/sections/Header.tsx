@@ -39,7 +39,7 @@ export function Header() {
     <header 
       className={`sticky top-0 z-40 border-b-2 border-border bg-white/95 backdrop-blur-sm transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
-      } md:translate-y-0`}
+      } md:!translate-y-0`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 md:py-6">
         <Link href="/" className="flex items-center gap-4 transition-opacity hover:opacity-80">
