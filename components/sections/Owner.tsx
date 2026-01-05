@@ -15,7 +15,7 @@ export function Owner() {
           {/* Image */}
           <div className="relative w-full md:w-1/2 aspect-[3/4] md:aspect-square max-w-md rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
             <Image
-              src="/images/owner.jpg"
+              src="/images/owner.webp"
               alt="Anandah オーナー 窪田佑美"
               fill
               className="object-cover"
