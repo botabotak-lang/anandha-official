@@ -13,7 +13,7 @@ const navItems = [
 
 export function QuickNav() {
   return (
-    <nav className="w-full bg-white border-b border-border/30 sticky top-0 z-30">
+    <nav className="w-full bg-white border-b border-border/30 sticky top-0 md:top-[128px] z-30 transition-[top] duration-300">
       <div className="mx-auto max-w-7xl">
         <div className="flex w-full">
           {navItems.map((item, index) => (
