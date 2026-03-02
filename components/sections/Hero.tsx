@@ -12,10 +12,10 @@ export function Hero() {
       */}
       <div className="relative w-full md:max-w-[500px] mx-auto shadow-xl overflow-hidden bg-white">
         
-        {/* メインのSVG画像（スマホ用デザイン1枚：TOP_hero4.svg） */}
+        {/* メインのFV画像（FV.png） */}
         <div className="w-full">
           <Image
-            src="/images/TOP_hero4.svg"
+            src="/images/FV.png"
             alt="お寺で整える、40代・50代からの人生最後の体質改善。3ヶ月で平均-10kgを目指す耳つぼダイエット。"
             width={500}
             height={800}

@@ -37,7 +37,7 @@ export function Owner() {
                 40代を過ぎて代謝が落ち、自己流のダイエットでは限界を感じていた時に、この耳つぼダイエットに出会いました。
               </p>
               <p>
-                その結果、2ヶ月でマイナス6kgの減量に成功。無理なく健康的に痩せられたことに、私自身が一番驚きました。
+                その結果、3ヶ月でマイナス10kgの減量に成功。無理なく健康的に痩せられたことに、私自身が一番驚きました。
               </p>
 
               {/* Before After Image */}
@@ -45,14 +45,14 @@ export function Owner() {
                 <div className="relative w-full rounded-xl overflow-hidden">
                   <Image
                     src="/images/before-after.jpg"
-                    alt="オーナー自身のビフォーアフター - 2ヶ月でマイナス6kg達成"
+                    alt="オーナー自身のビフォーアフター - 3ヶ月でマイナス10kg達成"
                     width={800}
                     height={600}
                     className="w-full h-auto object-contain"
                   />
                 </div>
                 <p className="mt-4 text-center text-lg md:text-xl font-black text-accent">
-                  ▲ 実際の私です。2ヶ月で-6kgを達成しました。
+                  ▲ 実際の私です。3ヶ月で-10kgを達成しました。
                 </p>
               </div>
 
