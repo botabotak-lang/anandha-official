@@ -1,22 +1,26 @@
 import Image from "next/image";
 import { Sparkles, Brain, Flame } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Solution() {
   return (
     <section id="solution" className="py-20 md:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         {/* 1. 見出しブロック */}
-        <div className="max-w-4xl mx-auto mb-12">
-        <SectionHeading
-            eyebrow="SOLUTION"
-          title="必要なのは「我慢」ではありません。耳つぼで「代謝」と「食欲」のスイッチを入れましょう。"
-            align="center"
-            icon={Sparkles}
-          />
-        </div>
+        <FadeIn>
+          <div className="max-w-4xl mx-auto mb-12">
+            <SectionHeading
+              eyebrow="SOLUTION"
+              title="必要なのは「我慢」ではありません。耳つぼで「代謝」と「食欲」のスイッチを入れましょう。"
+              align="center"
+              icon={Sparkles}
+            />
+          </div>
+        </FadeIn>
 
         {/* 2. 画像ブロック（見出しの下に移動） */}
+        <FadeIn delay={0.1}>
         <div className="relative h-[300px] md:h-[500px] max-w-5xl mx-auto rounded-[2rem] overflow-hidden shadow-xl mb-12">
             <Image
               src="/images/solution.jpg"
@@ -26,8 +30,10 @@ export function Solution() {
           />
           <div className="absolute inset-0 bg-primary/10" />
         </div>
+        </FadeIn>
 
         {/* 3. コンテンツブロック */}
+        <FadeIn delay={0.15}>
         <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl leading-relaxed text-text">
           <p>
             Anandah（アナンダ）が提供するのは、医学的根拠に基づいた「耳つぼダイエット」です。
@@ -77,6 +83,7 @@ export function Solution() {
             </p>
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

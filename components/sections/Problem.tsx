@@ -1,19 +1,23 @@
 import Image from "next/image";
 import { AlertCircle } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Problem() {
   return (
     <section id="problem" className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mx-auto max-w-4xl">
-          <SectionHeading
-            eyebrow="PROBLEM"
-            title="「昔と同じ食事なのに、なぜか太ってしまう」その原因は、年齢による「代謝の低下」かもしれません。"
-            align="center"
-            icon={AlertCircle}
-          />
+          <FadeIn>
+            <SectionHeading
+              eyebrow="PROBLEM"
+              title="「昔と同じ食事なのに、なぜか太ってしまう」その原因は、年齢による「代謝の低下」かもしれません。"
+              align="center"
+              icon={AlertCircle}
+            />
+          </FadeIn>
           
+          <FadeIn delay={0.1}>
           <div className="mt-12 md:mt-16 flex flex-col gap-12">
             {/* 導入テキスト */}
             <p className="text-lg md:text-xl leading-relaxed text-text text-center md:text-left">
@@ -65,6 +69,7 @@ export function Problem() {
               </p>
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

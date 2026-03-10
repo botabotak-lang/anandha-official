@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 const faqs = [
   {
@@ -47,16 +48,18 @@ export function FAQ() {
   return (
     <section id="faq" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-4xl px-5 md:px-8">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="よくあるご質問"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="FAQ"
+            title="よくあるご質問"
+            align="center"
+          />
+        </FadeIn>
 
         <div className="mt-12 md:mt-16 space-y-4">
           {faqs.map((faq, index) => (
+            <FadeIn key={index} delay={index * 0.07}>
             <div
-              key={index}
               className="border-2 border-border rounded-2xl overflow-hidden transition-all duration-300"
             >
               <button
@@ -90,6 +93,7 @@ export function FAQ() {
                 </div>
               </div>
             </div>
+            </FadeIn>
           ))}
         </div>
       </div>

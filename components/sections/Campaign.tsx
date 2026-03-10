@@ -1,16 +1,20 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Campaign() {
   return (
     <section id="campaign" className="py-20 md:py-28 bg-primary/5">
       <div className="mx-auto max-w-4xl px-5 md:px-8 text-center">
-        <SectionHeading
-          eyebrow="CAMPAIGN"
-          title="まずは「体験」して、効果を実感してください。"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="CAMPAIGN"
+            title="まずは「体験」して、効果を実感してください。"
+            align="center"
+          />
+        </FadeIn>
 
+        <FadeIn delay={0.1}>
         <div className="mt-8 md:mt-12 text-lg md:text-xl leading-relaxed text-text max-w-2xl mx-auto font-medium">
           <p>
             「本当に痩せられるの？」「私に合うかしら？」そんな不安を解消するために、初回限定の体験プランをご用意しました。
@@ -18,8 +22,10 @@ export function Campaign() {
             カウンセリングでしっかりとお話をお伺いした後、実際の耳つぼ施術を体験していただけます。
           </p>
         </div>
+        </FadeIn>
 
         {/* Offer Box */}
+        <FadeIn delay={0.2}>
         <div className="mt-12 md:mt-16 relative bg-white rounded-[2.5rem] shadow-2xl border-4 border-primary overflow-hidden max-w-2xl mx-auto">
           {/* Badge */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-primary text-white px-10 py-3 rounded-b-2xl font-black tracking-widest shadow-md w-full md:w-auto text-center text-lg">
@@ -58,10 +64,13 @@ export function Campaign() {
             </div>
           </div>
         </div>
+        </FadeIn>
 
-        <p className="mt-12 text-base md:text-lg text-text-muted font-bold">
-          「これならできる」と納得していただいた上でスタートしてほしいから、無理な勧誘は一切いたしません。安心してお越しください。
-        </p>
+        <FadeIn delay={0.3}>
+          <p className="mt-12 text-base md:text-lg text-text-muted font-bold">
+            「これならできる」と納得していただいた上でスタートしてほしいから、無理な勧誘は一切いたしません。安心してお越しください。
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

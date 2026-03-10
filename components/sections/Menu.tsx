@@ -1,19 +1,23 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Menu() {
   return (
     <section id="menu" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <SectionHeading
-          eyebrow="MENU"
-          title="施術内容"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="MENU"
+            title="施術内容"
+            align="center"
+          />
+        </FadeIn>
 
         <div className="mt-12 md:mt-20 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
           {/* 左側：画像 */}
-          <div className="w-full md:w-1/2 relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <FadeIn direction="right" delay={0.1} className="w-full md:w-1/2">
+          <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl">
             <Image
               src="/images/treatment-scene.webp"
               alt="施術の様子"
@@ -22,9 +26,11 @@ export function Menu() {
               unoptimized
             />
           </div>
+          </FadeIn>
 
           {/* 右側：詳細テキスト */}
-          <div className="w-full md:w-1/2 space-y-8">
+          <FadeIn direction="left" delay={0.2} className="w-full md:w-1/2">
+          <div className="space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl md:text-4xl font-black text-secondary leading-tight">
                 耳つぼダイエット<br className="sm:hidden"/>【初回カウンセリング＋耳つぼ施術体験】
@@ -106,6 +112,7 @@ export function Menu() {
               </div>
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

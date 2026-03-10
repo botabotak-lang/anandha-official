@@ -2,23 +2,35 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function CTASection() {
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="mx-auto max-w-4xl px-5 md:px-8 text-center">
-        <SectionHeading
-          title="今度こそ、リバウンドしない体へ。私たちと一緒に始めませんか？"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            title="今度こそ、リバウンドしない体へ。私たちと一緒に始めませんか？"
+            align="center"
+          />
+        </FadeIn>
         
+        <FadeIn delay={0.1}>
         <p className="mt-10 text-lg md:text-xl leading-relaxed text-text max-w-2xl mx-auto font-bold">
           「変わりたい」と思った今が、スタートのタイミングです。
           <br className="hidden md:block" />
           まずはLINE、またはお電話でお気軽にご予約ください。あなたにお会いできるのを心より楽しみにしています。
         </p>
+        </FadeIn>
 
-        <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-6">
+        <FadeIn delay={0.15}>
+          <p className="mt-10 text-sm md:text-base text-text-muted font-medium border border-border rounded-2xl px-6 py-3 max-w-xl mx-auto">
+            ※ 当サロンは<strong className="text-text font-bold">女性のお客様専用</strong>となっております。男性の方のご予約はお受けしておりません。
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.25}>
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-6">
           <ButtonLink
             href="https://lin.ee/bbJLZFe"
             label="LINEで予約する"
@@ -37,6 +49,7 @@ export function CTASection() {
             className="w-full md:w-auto min-w-[320px] !py-6 !text-xl shadow-2xl"
           />
         </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,19 +1,23 @@
 import Image from "next/image";
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Users } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Access() {
   return (
     <section id="access" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading
-          eyebrow="ACCESS"
-          title="店舗情報"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="ACCESS"
+            title="店舗情報"
+            align="center"
+          />
+        </FadeIn>
 
         <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-12">
           {/* Info Table */}
+          <FadeIn direction="right" delay={0.1}>
           <div className="space-y-8">
             <div className="bg-background/50 rounded-3xl p-10 border-2 border-border space-y-8 shadow-sm">
               <div>
@@ -39,6 +43,18 @@ export function Access() {
                       </dd>
                     </div>
                   </div>
+                  <div className="flex items-start gap-5 pt-2 border-t border-border/50">
+                    <Users className="size-7 text-secondary mt-1 shrink-0" />
+                    <div>
+                      <dt className="sr-only">対象</dt>
+                      <dd className="text-secondary">
+                        女性のお客様専用サロン
+                        <span className="block text-base text-text-muted font-medium mt-1">
+                          男性の方のご予約はお受けしておりません
+                        </span>
+                      </dd>
+                    </div>
+                  </div>
                 </dl>
               </div>
             </div>
@@ -60,8 +76,10 @@ export function Access() {
               </ul>
             </div>
           </div>
+          </FadeIn>
 
           {/* Map Embed */}
+          <FadeIn direction="left" delay={0.2}>
           <div className="relative h-[450px] md:h-full min-h-[500px] rounded-2xl overflow-hidden shadow-lg border border-border">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.6330405352337!2d138.26049419999998!3d34.89056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a4f85adbfa935%3A0x7d525ec99e5c359!2z44Ki44OK44Oz44OA77yIQW5hbmRhaO-8ieiIsOOBpOOBvOODgOOCpOOCqOODg-ODiOOCteODreODsw!5e0!3m2!1sja!2sjp!4v1735061614740!5m2!1sja!2sjp"
@@ -75,6 +93,7 @@ export function Access() {
               className="absolute inset-0"
             ></iframe>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

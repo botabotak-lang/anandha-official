@@ -1,19 +1,23 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Owner() {
   return (
     <section id="owner" className="py-20 md:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading
-          eyebrow="OWNER MESSAGE"
-          title="私も、過去に「痩せない悩み」を抱えていました。"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="OWNER MESSAGE"
+            title="私も、過去に「痩せない悩み」を抱えていました。"
+            align="center"
+          />
+        </FadeIn>
 
         <div className="mt-12 md:mt-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Image */}
-          <div className="relative w-full md:w-1/2 aspect-[3/4] md:aspect-square max-w-md rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
+          <FadeIn direction="right" delay={0.1} className="w-full md:w-1/2">
+          <div className="relative aspect-[3/4] md:aspect-square max-w-md rounded-[2rem] overflow-hidden shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
             <Image
               src="/images/owner.webp"
               alt="Anandah オーナー 窪田佑美"
@@ -21,9 +25,11 @@ export function Owner() {
               className="object-cover"
             />
           </div>
+          </FadeIn>
 
           {/* Text */}
-          <div className="w-full md:w-1/2 space-y-8">
+          <FadeIn direction="left" delay={0.2} className="w-full md:w-1/2">
+          <div className="space-y-8">
             <div className="space-y-3">
               <p className="text-base md:text-lg text-text-muted tracking-wider font-bold">Anandah オーナー</p>
               <h3 className="text-3xl md:text-4xl font-black text-primary">窪田 佑美</h3>
@@ -64,6 +70,7 @@ export function Owner() {
               </p>
             </div>
           </div>
+          </FadeIn>
         </div>
       </div>
     </section>

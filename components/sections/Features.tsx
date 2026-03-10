@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Armchair, Utensils, Landmark } from "lucide-react";
 
 const features = [
@@ -21,7 +22,7 @@ const features = [
     icon: Landmark,
     title: "お寺で整える\n特別なプライベート空間",
     description:
-      "忙しい日常から離れ, 静寂に包まれたお寺での施術。ここは, 心と体を一度リセットするための場所です。誰にも知られず, あなただけの落ち着いた時間の中で, 誠実に向き合いサポートいたします。",
+      "忙しい日常から離れ、静寂に包まれたお寺での施術。女性のお客様をお迎えする、マンツーマンのプライベートサロンです。誰にも知られず、あなただけの落ち着いた時間の中で、誠実に向き合いサポートいたします。",
     image: "/images/feature-temple.webp",
   },
 ];
@@ -30,16 +31,18 @@ export function Features() {
   return (
     <section id="features" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading
-          eyebrow="FEATURES"
-          title="Anandahが選ばれる3つの理由"
-          align="center"
-        />
+        <FadeIn>
+          <SectionHeading
+            eyebrow="FEATURES"
+            title="Anandahが選ばれる3つの理由"
+            align="center"
+          />
+        </FadeIn>
 
         <div className="mt-12 md:mt-20 grid md:grid-cols-3 gap-10">
           {features.map((feature, index) => (
+            <FadeIn key={index} delay={index * 0.15}>
             <div
-              key={index}
               className="group relative flex flex-col items-center text-center bg-background/30 p-8 md:p-10 rounded-[2.5rem] border-2 border-border transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-white hover:border-primary/30"
             >
               {/* Number Badge */}
@@ -69,6 +72,7 @@ export function Features() {
                 {feature.description}
               </p>
             </div>
+            </FadeIn>
           ))}
         </div>
       </div>
