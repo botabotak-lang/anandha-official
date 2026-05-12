@@ -1,24 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export function Hero() {
   return (
     <section className="w-full flex justify-center bg-[#F9F7F2] py-4 md:py-8">
-      {/* 
-        画像コンテナ: 
+      {/*
+        画像コンテナ:
         - スマホで幅一杯、PC/タブレットでは500pxに制限
       */}
       <div className="relative w-full md:max-w-[500px] mx-auto shadow-xl overflow-hidden bg-white">
-        
-        {/* メインのFV画像（FV.svg） */}
+
+        {/* メインのFV画像（FV.webp） */}
         <div className="w-full">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/FV.svg"
+          <Image
+            src="/images/FV.webp"
             alt="お寺で整える、40代・50代からの人生最後の体質改善。4ヶ月で平均-10kgを目指す耳つぼダイエット。"
+            width={1080}
+            height={1920}
             className="w-full h-auto block"
-            fetchPriority="high"
+            priority
           />
         </div>
 
