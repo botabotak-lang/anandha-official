@@ -18,7 +18,7 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
               <img
-                src="/images/anandah-logo.png"
+                src="/images/anandah-logo.webp"
                 alt="Anandah Logo"
                 className="h-16 w-auto grayscale opacity-80"
               />
@@ -50,7 +50,7 @@ export function Footer() {
             className="opacity-60 hover:opacity-100 transition-opacity"
           >
              <img
-                src="/images/Instagram.png"
+                src="/images/Instagram.webp"
                 alt="Instagram"
                 className="h-6 w-6 grayscale"
               />

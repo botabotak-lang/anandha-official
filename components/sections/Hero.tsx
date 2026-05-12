@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export function Hero() {
@@ -12,15 +11,14 @@ export function Hero() {
       */}
       <div className="relative w-full md:max-w-[500px] mx-auto shadow-xl overflow-hidden bg-white">
         
-        {/* メインのFV画像（FV.png） */}
+        {/* メインのFV画像（FV.svg） */}
         <div className="w-full">
-          <Image
-            src="/images/FV.png"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/FV.svg"
             alt="お寺で整える、40代・50代からの人生最後の体質改善。4ヶ月で平均-10kgを目指す耳つぼダイエット。"
-            width={500}
-            height={800}
             className="w-full h-auto block"
-            priority
+            fetchPriority="high"
           />
         </div>
 

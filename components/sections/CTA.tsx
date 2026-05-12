@@ -83,7 +83,7 @@ export function StickyCTA() {
           aria-label="Instagramを開く"
         >
           <img
-            src="/images/Instagram.png"
+            src="/images/Instagram.webp"
             alt="Instagram"
             className="size-5"
           />

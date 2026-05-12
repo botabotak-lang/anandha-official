@@ -44,7 +44,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 md:py-6">
         <Link href="/" className="flex items-center gap-4 transition-opacity hover:opacity-80">
           <img
-            src="/images/anandah-logo.png"
+            src="/images/anandah-logo.webp"
             alt="耳つぼダイエットサロン Anandah"
             className="h-16 w-auto md:h-20"
           />
@@ -77,7 +77,7 @@ export function Header() {
             aria-label="Instagramを開く"
           >
             <img
-              src="/images/Instagram.png"
+              src="/images/Instagram.webp"
               alt="Instagram"
               className="h-5 w-5"
             />
