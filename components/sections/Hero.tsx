@@ -16,7 +16,7 @@ export function Hero() {
         <div className="w-full">
           <Image
             src="/images/FV.png"
-            alt="お寺で整える、40代・50代からの人生最後の体質改善。3ヶ月で平均-10kgを目指す耳つぼダイエット。"
+            alt="お寺で整える、40代・50代からの人生最後の体質改善。4ヶ月で平均-10kgを目指す耳つぼダイエット。"
             width={500}
             height={800}
             className="w-full h-auto block"
