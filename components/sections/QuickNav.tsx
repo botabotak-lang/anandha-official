@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { User, Sparkles, JapaneseYen, HelpCircle, MapPin } from "lucide-react";
+import { BarChart3, User, Sparkles, JapaneseYen, HelpCircle, MapPin } from "lucide-react";
 
 const navItems = [
   { label: "ご挨拶", shortLabel: "挨拶", href: "#owner", icon: User },
   { label: "特徴", shortLabel: "特徴", href: "#features", icon: Sparkles },
+  { label: "お客様の変化", shortLabel: "実績", href: "#before-after", icon: BarChart3 },
   { label: "内容・料金", shortLabel: "料金", href: "#menu", icon: JapaneseYen },
   { label: "よくある質問", shortLabel: "Q&A", href: "#faq", icon: HelpCircle },
   { label: "アクセス", shortLabel: "アクセス", href: "#access", icon: MapPin },
@@ -23,7 +24,7 @@ export function QuickNav() {
               className={`
                 flex flex-col items-center justify-center py-3 md:py-4 px-0.5
                 hover:bg-background transition-colors group
-                w-1/5 
+                flex-1 
                 /* 枠線の制御：右側のみ入れる */
                 border-r border-border/30 last:border-r-0
               `}

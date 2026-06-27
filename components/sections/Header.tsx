@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "特徴", href: "#features" },
+  { label: "実績", href: "/before-after" },
   { label: "施術の流れ", href: "#flow" },
   { label: "料金", href: "#menu" },
   { label: "ご挨拶", href: "#owner" },

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import { ReactNode } from "react";
 
@@ -37,17 +36,13 @@ const variantClasses: Record<ButtonVariant, string> = {
 // LINE公式ロゴの画像コンポーネント
 function LineLogo({ className }: { className?: string }) {
   return (
-    <div className={`relative ${className}`}>
-    <Image
+    <img
       src="/images/line-logo.png"
       alt="LINE"
-        fill
-        sizes="24px"
-        className="object-contain"
-      priority
-      unoptimized
+      width={28}
+      height={28}
+      className={`block object-contain ${className ?? ""}`}
     />
-    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import { Access } from "@/components/sections/Access";
+import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Campaign } from "@/components/sections/Campaign";
 import { CTASection, StickyCTA } from "@/components/sections/CTA";
 import { Features } from "@/components/sections/Features";
@@ -24,6 +25,7 @@ export default function Home() {
           <Owner />
           <Problem />
           <Solution />
+          <BeforeAfter />
           <Features />
           <Flow />
           <Menu />
