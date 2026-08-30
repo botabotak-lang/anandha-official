@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { InlineCTA } from "@/components/ui/InlineCTA";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const faqs = [
@@ -96,6 +97,13 @@ export function FAQ() {
             </FadeIn>
           ))}
         </div>
+
+        <InlineCTA
+          message="疑問が解けたら、あとは一歩だけ。お待ちしています。"
+          label="LINEで予約する"
+          description="24時間受付中"
+          ctaId="faq-line"
+        />
       </div>
     </section>
   );

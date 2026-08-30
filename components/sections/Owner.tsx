@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { InlineCTA } from "@/components/ui/InlineCTA";
 
 export function Owner() {
   return (
@@ -72,6 +73,13 @@ export function Owner() {
           </div>
           </FadeIn>
         </div>
+
+        <InlineCTA
+          message="「私にもできるかな」と思われたら、まずはお話だけでも。"
+          label="LINEで相談してみる"
+          description="24時間受付中"
+          ctaId="owner-line"
+        />
       </div>
     </section>
   );

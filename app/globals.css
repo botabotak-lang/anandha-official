@@ -55,6 +55,8 @@
     }
   }
   --animate-cta-shine: cta-shine 3s infinite ease-in-out;
+  /* セクション内CTA用：画面に入ったとき3回だけ光る（常時点滅させず世界観を保つ） */
+  --animate-cta-shine-3: cta-shine 2.6s ease-in-out 3;
 
   /* Fonts */
   --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;

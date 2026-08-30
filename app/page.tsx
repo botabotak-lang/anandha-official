@@ -2,6 +2,7 @@ import { Access } from "@/components/sections/Access";
 import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Campaign } from "@/components/sections/Campaign";
 import { CTASection, StickyCTA } from "@/components/sections/CTA";
+import { DesktopFloatingCTA } from "@/components/sections/DesktopFloatingCTA";
 import { Features } from "@/components/sections/Features";
 import { Flow } from "@/components/sections/Flow";
 import { Header } from "@/components/sections/Header";
@@ -37,6 +38,7 @@ export default function Home() {
       </main>
       <Footer />
       <StickyCTA />
+      <DesktopFloatingCTA />
     </div>
   );
 }

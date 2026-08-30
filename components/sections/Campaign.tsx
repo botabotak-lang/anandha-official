@@ -1,5 +1,5 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { LineCtaButton } from "@/components/ui/InlineCTA";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Campaign() {
@@ -52,14 +52,11 @@ export function Campaign() {
             </div>
 
             <div className="w-full pt-8 md:w-auto">
-              <ButtonLink
-                href="https://lin.ee/bbJLZFe"
-                label="今すぐ体験を予約する"
+              <LineCtaButton
+                label="今すぐ体験を予約"
                 description="LINEで24時間受付中"
-                variant="line"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto shadow-2xl !px-12 !py-6 !text-xl"
+                ctaId="campaign-line"
+                className="w-full shadow-2xl md:min-w-[420px]"
               />
             </div>
           </div>
