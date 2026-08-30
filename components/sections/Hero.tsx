@@ -1,7 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+
+/**
+ * FV画像（750×1708）内にあるLINE CTAボタンの位置。
+ * 画像から実測した緑ボタンの範囲に、タップしやすいよう上下左右の余白を少し加えている。
+ * すべて%指定なので、画像が比率を保って伸縮しても位置がズレない。
+ */
+const CTA_AREA = {
+  left: "4.5%",
+  top: "86.8%",
+  width: "91%",
+  height: "10.2%",
+} as const;
+
+const LINE_URL = "https://lin.ee/bbJLZFe";
 
 export function Hero() {
   return (
@@ -12,33 +25,36 @@ export function Hero() {
       */}
       <div className="relative w-full md:max-w-[500px] mx-auto shadow-xl overflow-hidden bg-white">
 
-        {/* メインのFV画像（FV.webp） */}
-        <div className="w-full">
+        {/* メインのFV画像（画像内にLINE CTAボタンを含む） */}
+        <div className="relative w-full">
           <Image
-            src="/images/FV.webp"
-            alt="お寺で整える、40代・50代からの人生最後の体質改善。4ヶ月で平均-10kgを目指す耳つぼダイエット。"
-            width={1080}
-            height={1920}
+            src="/images/FV_v2.webp"
+            alt="藤枝市下藪田・最林寺内のお寺のプライベートサロン。40代〜50代からの耳つぼダイエットで3ヶ月-10kg。初回WEB予約限定キャンペーン 3,080円→1,500円（税込）。"
+            width={750}
+            height={1708}
+            sizes="(max-width: 768px) 100vw, 500px"
             className="w-full h-auto block"
             priority
           />
-        </div>
 
-        {/* 
-          CTAボタンエリア:
-          - 背景の緑を削除し、ボタン単体を配置
-          - 注目を集めるためのパルスアニメーションを追加
-        */}
-        <div className="p-6 pt-2 flex justify-center">
-          <ButtonLink
-            href="https://lin.ee/bbJLZFe"
-            label="今すぐLINE予約する"
-            description="24時間受付"
-            variant="line"
+          {/*
+            画像内のLINEボタンに重ねる透明リンク。
+            光沢が横切るエフェクトだけを重ねて「押せる」ことを伝える。
+          */}
+          <a
+            href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full shadow-2xl !px-8 !py-5 !text-lg md:!text-xl md:!py-6 animate-pulse-subtle"
-          />
+            aria-label="LINEで予約する（24時間受付中）"
+            data-cta="hero-line"
+            style={CTA_AREA}
+            className="absolute block overflow-hidden rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00C300]"
+          >
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 left-0 w-1/4 -skew-x-12 bg-gradient-to-r from-transparent via-white/70 to-transparent animate-cta-shine motion-reduce:hidden"
+            />
+          </a>
         </div>
       </div>
     </section>

@@ -45,6 +45,17 @@
   }
   --animate-pulse-subtle: pulse-subtle 2s infinite ease-in-out;
 
+  /* FV画像内CTAボタン用の光沢エフェクト */
+  @keyframes cta-shine {
+    0% {
+      transform: translateX(-140%);
+    }
+    55%, 100% {
+      transform: translateX(420%);
+    }
+  }
+  --animate-cta-shine: cta-shine 3s infinite ease-in-out;
+
   /* Fonts */
   --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
 }
