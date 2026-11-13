@@ -28,7 +28,7 @@ export function Access() {
                     <div>
                       <dt className="sr-only">住所</dt>
                       <dd>
-                        〒426-0005 静岡県藤枝市下藪田322<br />
+                        〒426-0201 静岡県藤枝市下藪田322<br />
                         最林寺内
                       </dd>
                     </div>

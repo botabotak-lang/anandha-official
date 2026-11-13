@@ -35,7 +35,7 @@ export default function RootLayout({
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "下藪田322",
-      "postalCode": "426-0005",
+      "postalCode": "426-0201",
       "addressLocality": "藤枝市",
       "addressRegion": "静岡県",
       "addressCountry": "JP"
